@@ -1,0 +1,180 @@
+section {
+    min-height: 100vh;
+}
+
+
+#content p {
+    line-height: 2em;
+
+}
+
+.section-padding {
+    padding-block-start: 10em;
+}
+
+.site-wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+nav ul li:last-child{
+    display: none;
+}
+
+/*WELCOME*/
+
+#header .container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.welcome-header {
+    background: #121212 !important;
+    color: #ECECEC;
+}
+
+.welcome-header .site-wrapper>div {
+    text-align: center;
+    display: grid;
+    grid-row-gap: 9em;
+    justify-items: center;
+}
+
+.light {
+    color: #ECECEC;
+}
+
+.welcome-header h1 {
+    font-size: 4.2em;
+}
+
+.welcome-header p {
+    padding: 0 10%;
+    font-size: 1.4em;
+   
+}
+
+/*Custom Design*/
+
+.custom-design {
+    background: #1C1C1C !important;
+    color: #ECECEC;
+}
+
+.custom-design .site-wrapper>div {
+    text-align: center;
+    display: grid;
+    grid-row-gap: 9em;
+    justify-items: center;
+}
+
+.custom-design p {
+    padding: 0 10%;
+    font-size: 1.4em;
+    
+}
+
+.custom-design h2 {
+    margin-block-end: 3em;
+    font-size: 2.9em;
+}
+
+
+/*Service*/
+
+.services h2 {
+    margin-block-end: 3em;
+    font-size: 2.9em;
+}
+
+
+
+/**/
+
+#contact-form-overlay-mini {
+    float: right;
+    width: 50%;
+    margin: 0;
+}
+
+	
+
+/*Serivces*/
+.services-img-col{
+	padding:0;
+}
+#services h3{
+	margin-bottom:0;
+}
+
+#services .service-description{
+	margin-bottom: 30px;display:block
+}
+
+.services {
+	padding-bottom:10em;
+}
+
+.services .service-row{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	align-items:center;
+	justify-content: center;
+}
+
+
+@media (max-width: 991.98px) {
+    #header.dark.transparent-header, #header.dark.semi-transparent {
+        background-color: #121212;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #contact-form-overlay-mini {
+        float: right;
+        width: 90%;
+        margin: 0;
+    }
+    .site-wrapper {
+        width: 80%;
+        margin: auto;
+    }
+    nav ul li:last-child{
+        display: block;
+    }
+}
+
+
+
+@media(max-width:490px){
+	.services .service-row{
+		display:grid;
+		grid-template-columns:1fr ;
+		align-items:center;
+		justify-content: center;
+		margin-bottom:5em;
+	}
+
+	.services .service-row .service-text{
+		order:1;
+		
+	}
+	
+	.services .service-row .service-img{
+		order:2;
+		
+	}
+	
+	.welcome-header p {
+    padding: 0;
+    font-size: 1.4em;
+}
+
+.custom-design p {
+    padding: 0;
+    font-size: 1.4em;
+}
+	
+}
