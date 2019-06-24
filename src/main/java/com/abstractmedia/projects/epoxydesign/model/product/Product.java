@@ -10,12 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Subcategory;
-
+import com.abstractmedia.projects.epoxydesign.model.order.ProductOrders;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import org.springframework.lang.Nullable;
@@ -70,6 +69,10 @@ public class Product implements Serializable {
 
 	@Transient
 	private int quantity;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private List<ProductOrders> productOrders;
 
 	
 
@@ -125,6 +128,10 @@ public class Product implements Serializable {
 	}/**
 	 * @return the price
 	 */
+	
+	public BigDecimal getOriginalPrice() {
+		return price.setScale(2,RoundingMode.HALF_EVEN);
+	}
 	public BigDecimal getPrice() {
 		if(this.sale) {
 			return calcDiscount().setScale(2,RoundingMode.HALF_EVEN);
@@ -265,6 +272,16 @@ public class Product implements Serializable {
 
 	
 	
+
+
+	public List<ProductOrders> getProductOrders() {
+		return productOrders;
+	}
+
+
+	public void setProductOrders(List<ProductOrders> productOrders) {
+		this.productOrders = productOrders;
+	}
 
 
 	public BigDecimal calcDiscount(){

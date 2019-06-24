@@ -84,6 +84,9 @@ function updateCart(){
         method: 'POST',
         data: json,
         success: function (data) {
+        	$("#cart-subtotal").text("");
+            $("#cart-tax").text("");
+            $("#cartTotal").text("");
             $("#cart-subtotal").text(`$${data.cartSubtotal}`);
             $("#cart-tax").text(`$${data.tax}`);
             $("#cartTotal").text(`$${data.cartTotal}`);

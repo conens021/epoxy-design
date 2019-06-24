@@ -1,6 +1,7 @@
 package com.abstractmedia.projects.epoxydesign.controller;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.abstractmedia.projects.epoxydesign.features.Cart;
 import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
-import com.abstractmedia.projects.epoxydesign.model.Category;
+import com.abstractmedia.projects.epoxydesign.model.Customer;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 
 import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
@@ -63,9 +64,6 @@ public class MainCotroller {
 		model.addAttribute("categories",sessionHelper.getCategories(session));
 		
 		
-		for(Category cat : sessionHelper.getCategories(session)) {
-			System.out.println(cat.getName());
-		}
 		
 		Map<Integer,Product> sessionCart = sessionHelper.getCart(session);
 		List<Product> cartItems = cart.getCartItems(sessionCart);
@@ -90,15 +88,17 @@ public class MainCotroller {
 	
 	
        
-        BigDecimal cartSubtotal = cart.calcCartSubTotal(cartItems);
+        BigDecimal cartSubtotal = cart.calcCartSubTotal(cartItems).setScale(2, RoundingMode.HALF_EVEN);
 	
-        BigDecimal tax = cart.getTAX(cartSubtotal);
-        BigDecimal total = cart.cartTotal(tax, cartSubtotal);
+        BigDecimal tax = cart.getTAX(cartSubtotal).setScale(2, RoundingMode.HALF_EVEN);
+        BigDecimal total = cart.cartTotal(tax, cartSubtotal).setScale(2, RoundingMode.HALF_EVEN);
 
         model.addAttribute("cartItems", cartItems);
         model.addAttribute("cartSubtotal", cartSubtotal);
         model.addAttribute("cartTotal", total);
         model.addAttribute("tax", tax);
+        
+        model.addAttribute("customer",new Customer());
 		return "checkout";
 	}
 
@@ -112,10 +112,10 @@ public class MainCotroller {
 		
         List<Product> cartItems = cart.getCartItems(sessionCart);
        
-        BigDecimal cartSubtotal = cart.calcCartSubTotal(cartItems);
+        BigDecimal cartSubtotal = cart.calcCartSubTotal(cartItems).setScale(2, RoundingMode.HALF_EVEN);
 	
-        BigDecimal tax = cart.getTAX(cartSubtotal);
-        BigDecimal total = cart.cartTotal(tax, cartSubtotal);
+        BigDecimal tax = cart.getTAX(cartSubtotal).setScale(2, RoundingMode.HALF_EVEN);
+        BigDecimal total = cart.cartTotal(tax, cartSubtotal).setScale(2, RoundingMode.HALF_EVEN);
 
         model.addAttribute("cartItems", cartItems);
         model.addAttribute("cartSubtotal", cartSubtotal);
@@ -123,5 +123,11 @@ public class MainCotroller {
         model.addAttribute("tax", tax);
         return "cart";
     }
+	
+	
+	@GetMapping("/favicon.ico")
+	public String getFavicon() {
+		return "images/favicon.ico";
+	}
 
 }

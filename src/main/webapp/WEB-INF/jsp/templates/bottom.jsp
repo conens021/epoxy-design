@@ -8,7 +8,7 @@
             <script src="/scripts/jquery.js"></script>
             <script src="/scripts/plugins.js"></script>
             <script src="/scripts/to-cart.js"></script>
-
+			<script src="/scripts/place-order.js"></script>
             <!-- Footer Scripts
             ============================================= -->
             <script src="/scripts/functions.js"></script>

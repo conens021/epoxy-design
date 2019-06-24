@@ -75,8 +75,8 @@
                                     ============================================= -->
                             <c:choose>
                                 <c:when test="${product.onSale()}">
-                                    <div class="product-price"><del>$${product.getPrice()}</del>
-                                        <ins>$${product.calcDiscount()}</ins>
+                                    <div class="product-price"><del>$${product.getOriginalPrice()}</del>
+                                        <ins>$${product.getPrice()}</ins>
                                     </div>
                                 </c:when>
                                 <c:otherwise>

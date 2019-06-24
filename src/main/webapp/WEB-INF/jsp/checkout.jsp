@@ -40,57 +40,72 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vel odio non dicta
 							provident sint ex autem mollitia dolorem illum repellat ipsum aliquid illo similique
 							sapiente fugiat minus ratione.</p>
-
-						<form id="billing-form" name="billing-form" class="nobottommargin" action="#" method="post">
+							
+						 <form:form id="order-form" method="POST"
+          						action="/place-order" modelAttribute="customer"  class="nobottommargin">
+					
 
 							<div class="col_half">
-								<label for="billing-form-name">Name:</label>
-								<input type="text" id="billing-form-name" name="billing-form-name" value=""
+								<form:label path="firstName">*Name:</form:label>
+								<form:input type="text" required="required" id="billing-form-name" path="firstName"
 									class="sm-form-control" />
+								<span id="error-f-name" class="error">First name is required</span>
 							</div>
 
 							<div class="col_half col_last">
-								<label for="billing-form-lname">Last Name:</label>
-								<input type="text" id="billing-form-lname" name="billing-form-lname" value=""
+								<form:label path="lastName">*Last Name:</form:label>
+								<form:input type="text" required="required" id="billing-form-lname" path="lastName"
 									class="sm-form-control" />
+									<span id="error-l-name" class="error">Last name is required</span>
 							</div>
 
 							<div class="clear"></div>
 
 							<div class="col_full">
-								<label for="billing-form-companyname">Company Name:</label>
-								<input type="text" id="billing-form-companyname" name="billing-form-companyname"
-									value="" class="sm-form-control" />
+								<form:label path="company">Company Name:</form:label>
+								<form:input type="text" id="billing-form-companyname" path="company"
+									 class="sm-form-control" />
 							</div>
-
-
 
 
 
 							<div class="col_half">
-								<label for="billing-form-email">Email Address:</label>
-								<input type="email" id="billing-form-email" name="billing-form-email" value=""
+								<form:label path="email">*Email Address:</form:label>
+								<form:input type="email" required="required" id="billing-form-email" path="email" value=""
 									class="sm-form-control" />
+									<span id="error-email" class="error">Email address not valid</span>
 							</div>
 
 							<div class="col_half col_last">
-								<label for="billing-form-phone">Phone:</label>
-								<input type="text" id="billing-form-phone" name="billing-form-phone" value=""
+								<form:label path="phoneNumber">*Phone:</form:label>
+								<form:input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" id="billing-form-phone" 
+									path="phoneNumber" 
 									class="sm-form-control" />
+									<span id="error-phone" class="error">Phone number not valid</span>
+								
 							</div>
 							<div class="col_full col_last">
-								<label for="billing-form-phone">Personal ID Number:</label>
-								<input type="text" id="billing-form-phone" name="billing-form-phone" value=""
+								<form:label path="personalId">*Personal ID Number:</form:label>
+								<form:input type="text" required="required" id="billing-form-phone" path="personalId" value=""
 									class="sm-form-control" />
+								<span id="error-id" class="error">Personal id is not valid</span>
+								
 							</div>
 							<div class="col_full">
-								<label for="shipping-form-message">Notes <small>*</small></label>
-								<textarea class="sm-form-control" id="shipping-form-message"
-									name="shipping-form-message" rows="10" cols="30"></textarea>
+								<form:label path="note">Notes </form:label>
+								<form:textarea class="sm-form-control" id="shipping-form-message"
+									path="note" rows="10" cols="30"></form:textarea>
+								
 							</div>
+					
 
-
-						</form>
+						</form:form>
+									<div>
+										<input id="checkbox-10" class="checkbox-style" name="checkbox-10" type="checkbox" >
+										<label for="checkbox-10" class="checkbox-style-3-label">
+										I guarantee the law for the accuracy of the above data</label>
+										<span id="check-error"  class="error">You must guarantee for your information</span>
+									</div>
 					</div>
 
 					<div class="w-100 bottommargin"></div>
@@ -175,7 +190,7 @@
 
 							</table>
 						</div>
-						<a href="#" class="button button-3d fright">Place Order</a>
+						<button id="place-order"  class="button button-3d fright">Place Order</button>
 					</div>
 				</div>
 

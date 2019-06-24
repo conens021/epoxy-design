@@ -11,12 +11,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 
 @Entity
 
 public class Category implements Serializable{
+	
 	private static final long serialVersionUID = 7016137043505199950L;
 
 	@Id

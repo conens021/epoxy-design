@@ -1,4 +1,11 @@
 
+
+.error{
+	display:none;
+	color:red;
+	
+}
+
 #header .container {
 
     display: flex;

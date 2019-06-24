@@ -1,6 +1,7 @@
 package com.abstractmedia.projects.epoxydesign.controller;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.Map;
 
@@ -18,13 +19,9 @@ import com.abstractmedia.projects.epoxydesign.model.product.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -90,9 +87,10 @@ public class CartController {
         session.setAttribute("cart", sessionCart);
         
         List<Product> items = cart.getCartItems(sessionHelper.getCart(session));
-        BigDecimal subtotal = cart.calcCartSubTotal(items);
-        BigDecimal tax = cart.getTAX(subtotal);
-        BigDecimal total = cart.cartTotal(tax, subtotal);
+        BigDecimal subtotal = cart.calcCartSubTotal(items).setScale(2, RoundingMode.HALF_EVEN);
+    	
+        BigDecimal tax = cart.getTAX(subtotal).setScale(2, RoundingMode.HALF_EVEN);
+        BigDecimal total = cart.cartTotal(tax, subtotal).setScale(2, RoundingMode.HALF_EVEN);
 
         return new ResponseEntity<CartResponse>(new CartResponse(items,subtotal,total,tax,items.size()), HttpStatus.OK);
     }
