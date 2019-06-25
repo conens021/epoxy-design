@@ -2,10 +2,13 @@ package com.abstractmedia.projects.epoxydesign.controller;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
+
+import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -16,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.abstractmedia.projects.epoxydesign.features.Cart;
 import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
+import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Customer;
+import com.abstractmedia.projects.epoxydesign.model.Message;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 
 import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
@@ -33,13 +38,14 @@ public class MainCotroller {
 
 	@Autowired
 	private Cart cart;
+
 	
 	/* INDEX PAGE */
 	@GetMapping("/")
 	public String getIndex(Model model) {
 		
 		
-	
+		
 
 		return "index";
 	}
@@ -55,13 +61,22 @@ public class MainCotroller {
 		Page<Product> products = productRepositoryImpl.findAllProducts(page, direction, sortBy,20);
 		
 		model.addAttribute("products",products);
-
 		model.addAttribute("sb", sortBy);
 		model.addAttribute("sd", direction);
 		
-		model.addAttribute("title",String.format("Shop - %s",DomainInfo.getDomainName()));
 		
-		model.addAttribute("categories",sessionHelper.getCategories(session));
+		List<Category> categories = sessionHelper.getCategories(session);
+		
+		List<String> categoryNames = new ArrayList<>();
+		
+		for(Category c : categories) {
+			categoryNames.add(c.getName());
+		}
+			
+		
+		model.addAttribute("title",String.format("%s %s",DomainInfo.getDomainName(),StringUtils.join(categoryNames,',')));
+		
+		model.addAttribute("categories",categories);
 		
 		
 		
@@ -97,8 +112,8 @@ public class MainCotroller {
         model.addAttribute("cartSubtotal", cartSubtotal);
         model.addAttribute("cartTotal", total);
         model.addAttribute("tax", tax);
-        
         model.addAttribute("customer",new Customer());
+        model.addAttribute("title",String.format("Checkout - %s",DomainInfo.getDomainName()));
 		return "checkout";
 	}
 
@@ -121,6 +136,7 @@ public class MainCotroller {
         model.addAttribute("cartSubtotal", cartSubtotal);
         model.addAttribute("cartTotal", total);
         model.addAttribute("tax", tax);
+        model.addAttribute("title",String.format("Shoping Cart - %s",DomainInfo.getDomainName()));
         return "cart";
     }
 	

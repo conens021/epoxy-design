@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -81,14 +80,14 @@ public class OrderController {
 		order.setCustomer(customer);
 		
 		
-		//Orders savedOrder = ordersRepisotry.save(order);
+		Orders savedOrder = ordersRepisotry.save(order);
 		
 
 		
 		
 		email.setFrom(customer.getEmail());
 		email.setFromName("Epoxy Design Orders");
-		email.setSubject(String.format("Order %d", order.getId()));
+		email.setSubject(String.format("Order %d", savedOrder.getId()));
 		
 		email.setMsg(String.format("You have new order\n"
 				+ "Customer name : %s %s\n"
@@ -98,7 +97,7 @@ public class OrderController {
 				+"Note : %s\n"
 				+ "For more information about order follow next link:\nhttp://localhost:8081/admin/order/%s",
 				customer.getFirstName(),customer.getLastName(),customer.getEmail()
-				,customer.getPhoneNumber(),customer.getCompany(),customer.getNote(),order.getId()));
+				,customer.getPhoneNumber(),customer.getCompany(),customer.getNote(),savedOrder.getId()));
 	
 		email.sendMessage();
 		

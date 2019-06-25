@@ -7,6 +7,7 @@ import java.util.Optional;
 import javax.servlet.http.HttpSession;
 
 import com.abstractmedia.projects.epoxydesign.features.Cart;
+import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 import com.abstractmedia.projects.epoxydesign.services.ProductRepository;
@@ -53,11 +54,18 @@ public class ProductController {
                 List<Product> cartItems = cart.getCartItems(sessionCart);
                 model.addAttribute("cartItems", cartItems);
                 model.addAttribute("cartTotal", cart.calcCartSubTotal(cartItems));
-
+        		model.addAttribute("title",
+    					String.format("%s - %s", product.get().getTitle(), DomainInfo.getDomainName()));
                 return "shop-single";
             }
+    		model.addAttribute("title",
+					String.format("Page Not Found - %s", DomainInfo.getDomainName()));
+            model.addAttribute("categories", sessionHelper.getCategories(session));
             return "404";
         } catch (NumberFormatException ex) {
+        	model.addAttribute("title",
+					String.format("Page Not Found - %s", DomainInfo.getDomainName()));
+        	model.addAttribute("categories", sessionHelper.getCategories(session));
             return "404";
         }
 

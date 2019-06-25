@@ -51,9 +51,8 @@
 								<div class="product-overlay">
 									<a onclick="return addToCart(${product.getId()},1)"  href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Add to
 											Cart</span></a>
-									<a href="/include/ajax/shop-item.html" class="item-quick-view"
-										data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick
-											View</span></a>
+									<a href="/product/${product.getId()}-${product.getName()}">
+										<i class="icon-zoom-in2"></i><span>Show Product</span></a>
 								</div>
 							</div>
 							<div class="product-desc center">

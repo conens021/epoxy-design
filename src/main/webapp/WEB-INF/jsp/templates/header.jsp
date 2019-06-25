@@ -20,7 +20,7 @@
                                             <i class="icon-facebook"></i>
                                         </a>
                                     </li>
-                                    <li><a href="www.instagram.com/epoxy_design_furniture_/" target="_blank" class="social-icon si-borderless si-instagram">
+                                    <li><a href="https://www.instagram.com/epoxy_design_furniture_/" target="_blank" class="social-icon si-borderless si-instagram">
                                             <i class="icon-instagram"></i>
                                             <i class="icon-instagram"></i>
                                         </a></li>

@@ -3,8 +3,6 @@ package com.abstractmedia.projects.epoxydesign.features;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.mail.Session;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 

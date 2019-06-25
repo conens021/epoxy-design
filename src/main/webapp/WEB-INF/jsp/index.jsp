@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 
@@ -34,7 +35,7 @@
 
 	<!-- Document Title
         ============================================= -->
-	<title>Shop Demo | Canvas</title>
+	<title>Epoxy Design | Everything You need for your Home or Business</title>
 	<style>
 		#header.dark.sticky-header.transparent-header #header-wrap:not (.not-dark) {
 			background: #1C1C1C;
@@ -138,6 +139,7 @@
 					<h2 data-animate="fadeInUp" class="text-center">Our Services</h2>
 
 					<div class="row grid-container" data-layout="masonry" style="overflow: visible">
+						
 						<div class="col-lg-4 mb-4">
 							<div class="flip-card text-center">
 								<div class="flip-card-front dark" data-height-xl="505"
@@ -145,8 +147,8 @@
 									<div class="flip-card-inner">
 										<div class="card nobg noborder text-center">
 											<div class="card-body">
-												<i class="icon-line2-briefcase h1"></i>
-												<h3 class="card-title">Special title treatment</h3>
+												
+												<h3 class="card-title  mb-lg-5">Special title treatment</h3>
 												<p class="card-text t400">With supporting text below as a natural
 													lead-in to additional content.</p>
 											</div>
@@ -158,7 +160,9 @@
 									<div class="flip-card-inner">
 										<p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing
 											elit. Alias cum repellat velit.</p>
+										<a href="/products"> 
 										<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -170,8 +174,7 @@
 									<div class="flip-card-inner">
 										<div class="card nobg noborder text-center">
 											<div class="card-body">
-												<i class="icon-line2-briefcase h1"></i>
-												<h3 class="card-title">Special title treatment</h3>
+												<h3 class="card-title mb-lg-5">Special title treatment</h3>
 												<p class="card-text t400">With supporting text below as a natural
 													lead-in to additional content.</p>
 											</div>
@@ -183,7 +186,9 @@
 									<div class="flip-card-inner">
 										<p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing
 											elit. Alias cum repellat velit.</p>
-										<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
+											<a href="/products"> 
+												<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
+											</a>
 									</div>
 								</div>
 							</div>
@@ -195,8 +200,8 @@
 									<div class="flip-card-inner">
 										<div class="card nobg noborder text-center">
 											<div class="card-body">
-												<i class="icon-line2-briefcase h1"></i>
-												<h3 class="card-title">Special title treatment</h3>
+												
+												<h3 class="card-title  mb-lg-5">Special title treatment</h3>
 												<p class="card-text t400">With supporting text below as a natural
 													lead-in to additional content.</p>
 											</div>
@@ -208,7 +213,9 @@
 									<div class="flip-card-inner">
 										<p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing
 											elit. Alias cum repellat velit.</p>
-										<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
+											<a href="/products"> 
+												<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
+											</a>
 									</div>
 								</div>
 							</div>
@@ -232,7 +239,7 @@
 
 					<!-- Contact Form Overlay
                         ============================================= -->
-					<div data-animate="rollIn" id="contact-form-overlay-mini" class="clearfix">
+					<div  id="contact-form-overlay-mini" class="clearfix">
 
 						<div class="fancy-title title-dotted-border">
 							<h3>Contact Us</h3>
@@ -244,8 +251,7 @@
 
 							<!-- Contact Form
                                 ============================================= -->
-							<form class="nobottommargin" id="template-contactform" name="template-contactform"
-								action="include/form.php" method="post">
+							<form>
 
 								<div class="col_full">
 									<label for="template-contactform-name">Name <small>*</small></label>
@@ -283,16 +289,22 @@
 								name="template-contactform-message" rows="6" cols="30"></textarea>
 						</div>
 
-						<div class="col_full hidden">
+						<div id ="send-btn-col" class="col_full hidden">
 							<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck"
 								value="" class="sm-form-control" />
 						</div>
-
-						<div class="col_full">
-							<button class="button button-3d nomargin" type="submit" id="template-contactform-submit"
-								name="template-contactform-submit" value="submit">Send
+						
+						<div id="send-btn-col" class="col_full">
+							<button type="submit" class="button button-3d nomargin" id="send-msg"
+								value="submit">Send
 								Message</button>
 						</div>
+						<div   class="col_full">
+							<img id="loader-col" style="display:none;opacity:0;height: 100px;margin: auto;" src="/images/loader.gif">
+							<span id="msg-sent" style="display:none;opacity:0">Message sent</span>
+						</div>
+						
+						
 
 						<input type="hidden" name="prefix" value="template-contactform-">
 
@@ -333,10 +345,16 @@
 	<script src="/scripts/jquery.js"></script>
 	<script src="/scripts/plugins.js"></script>
 	<script src="/scripts/load-more.js"></script>
+	<script src="/scripts/send-message.js"></script>
 	<script>AOS.init();</script>
 	<!-- Footer Scripts
             ============================================= -->
 	<script src="/scripts/functions.js"></script>
+	   <script>
+	            $(document).ready(function(){
+	            	$("#footer-year").text( (new Date).getFullYear() );
+	            })
+            </script>
 
 </body>
 

@@ -66,10 +66,6 @@ public class Customer implements Serializable {
 
 
 
-
-
-
-
 	public Customer(int id,
 			@NotNull(message = "Cannot be empty") @Min(value = 2, message = "First name to short (min 2 characters)") String firstName,
 			@NotNull(message = "Cannot be empty") @Min(value = 2, message = "Last name to short (min 2 characters)") String lastName,

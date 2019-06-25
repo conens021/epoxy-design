@@ -1,11 +1,13 @@
 package com.abstractmedia.projects.epoxydesign.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.tomcat.util.buf.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -64,8 +66,20 @@ public class CategoryController {
 			model.addAttribute("nextPage", products.getNumber() + 2);
 			model.addAttribute("category", category.get());
 			model.addAttribute("subcategories", subcategories);
-			model.addAttribute("title",
-					String.format("%s - %s", category.get().getTitle(), DomainInfo.getDomainName()));
+			if(subcategories.size() == 0) {
+				model.addAttribute("title",
+						String.format("%s %s",DomainInfo.getDomainName(), category.get().getTitle() ));
+			}
+			else {
+				List<String> subcategoryNames = new ArrayList<>();
+				
+				for(Subcategory s : subcategories) {
+					subcategoryNames.add(s.getName());
+				}
+				model.addAttribute("title",String.format("%s %s",DomainInfo.getDomainName(),StringUtils.join(subcategoryNames,',')));
+					
+			}
+				
 			model.addAttribute("categories", sessionHelper.getCategories(session));
 			model.addAttribute("sb", sortBy);
 			model.addAttribute("sd", direction);
@@ -75,9 +89,12 @@ public class CategoryController {
 			model.addAttribute("cartItems", cartItems);
 			model.addAttribute("cartTotal", cart.calcCartSubTotal(cartItems));
 
+
 			return "category";
 		}
-
+		model.addAttribute("title",
+				String.format("Page Not Found - %s", DomainInfo.getDomainName()));
+		model.addAttribute("categories", sessionHelper.getCategories(session));
 		return "404";
 
 	}
@@ -115,13 +132,18 @@ public class CategoryController {
 				List<Product> cartItems = cart.getCartItems(sessionCart);
 				model.addAttribute("cartItems", cartItems);
 				model.addAttribute("cartTotal", cart.calcCartSubTotal(cartItems));
-				// model.addAttribute("title",String.format("%s | %s",
-				// ToTitleCase.convert(subcategory.),DomainInfo.getDomainName()));
+				model.addAttribute("title",
+						String.format("%s %s",  DomainInfo.getDomainName(),optinalSubcateg.get().getTitle()));
 				return "subcategory";
 			} else
+				model.addAttribute("title",
+						String.format("Page Not Found - %s", DomainInfo.getDomainName()));
+				model.addAttribute("categories", sessionHelper.getCategories(session));
 				return "404";
 		}
-
+		model.addAttribute("title",
+				String.format("Page Not Found - %s", DomainInfo.getDomainName()));
+		model.addAttribute("categories", sessionHelper.getCategories(session));
 		return "404";
 	}
 
