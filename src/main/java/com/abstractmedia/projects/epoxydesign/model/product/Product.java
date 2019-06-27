@@ -77,16 +77,16 @@ public class Product implements Serializable {
 	
 
 	public Product(){
-		super();
-		this.id = 0;
+		
+		
 	}
 
 	
-	public Product(int id, String name, String title, String description, BigDecimal price, Boolean sale,
+	public Product( String name, String title, String description, BigDecimal price, Boolean sale,
 			int saleAmount, int onStock, List<ProductImages> images,
 			 int quantity) {
-		super();
-		this.id = id;
+	
+		
 		this.name = name;
 		this.title = title;
 		this.description = description;
@@ -102,6 +102,11 @@ public class Product implements Serializable {
 
 
 	
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 
 	/**

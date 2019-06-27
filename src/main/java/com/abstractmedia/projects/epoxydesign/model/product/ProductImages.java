@@ -37,6 +37,10 @@ public class ProductImages implements Serializable{
         super();
     }
 
+    public ProductImages(String imageUrl){
+        this.imageUrl = imageUrl;
+    }
+
     
     public ProductImages(int id,String imageUrl){
         this.id = id;

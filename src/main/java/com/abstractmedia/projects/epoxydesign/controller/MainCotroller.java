@@ -23,7 +23,7 @@ import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Customer;
 import com.abstractmedia.projects.epoxydesign.model.Message;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-
+import com.abstractmedia.projects.epoxydesign.services.ProductRepository;
 import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
 
 @Controller
@@ -32,6 +32,9 @@ public class MainCotroller {
 	
 	@Autowired
 	private ProductRepositoryImpl productRepositoryImpl;
+	
+	@Autowired
+	private ProductRepository productRepository;
 
 	@Autowired
 	private SessionHelper sessionHelper;
@@ -144,6 +147,14 @@ public class MainCotroller {
 	@GetMapping("/favicon.ico")
 	public String getFavicon() {
 		return "images/favicon.ico";
+	}
+	
+	
+	@GetMapping("test")
+	public String test() {
+		productRepository.save(new Product());
+		
+		return "all-products";
 	}
 
 }

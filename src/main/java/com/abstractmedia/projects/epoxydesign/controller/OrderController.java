@@ -1,12 +1,14 @@
 package com.abstractmedia.projects.epoxydesign.controller;
 
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -99,7 +101,12 @@ public class OrderController {
 				customer.getFirstName(),customer.getLastName(),customer.getEmail()
 				,customer.getPhoneNumber(),customer.getCompany(),customer.getNote(),savedOrder.getId()));
 	
-		email.sendMessage();
+		try {
+			email.sendMessage();
+		} catch (MessagingException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		session.setAttribute("cart", new HashMap<Integer,Product>());

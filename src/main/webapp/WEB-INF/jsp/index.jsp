@@ -269,8 +269,8 @@
 								<div class="clear"></div>
 
 								<div class="col_full">
-									<label for="template-contactform-phone">Phone</label> <input type="text"
-										id="template-contactform-phone" name="template-contactform-phone" value=""
+									<label for="template-contactform-phoneNumber">Phone</label> <input type="text"
+										id="template-contactform-phoneNumber" name="template-contactform-phoneNumber" value=""
 										class="sm-form-control" />
 								</div>
 						</div>

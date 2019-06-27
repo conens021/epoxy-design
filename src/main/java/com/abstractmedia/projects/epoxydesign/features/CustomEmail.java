@@ -1,24 +1,32 @@
 package com.abstractmedia.projects.epoxydesign.features;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.IOException;
+
+import java.util.Date;
+
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
-import org.apache.commons.mail.Email;
-import org.apache.commons.mail.EmailException;
-import org.apache.commons.mail.SimpleEmail;
+import javax.mail.internet.MimeMessage;
+
+
+
 import org.springframework.stereotype.Component;
 
 @Component
-public class  CustomEmail {
-	
-	
-	
-	private Email simpleEmail;
+public class  CustomEmail  {
+
+
 	private final String HOST_NAME = "smtp.googlemail.com";
-	private final int PORT_NUMBER = 465;
+	private final int PORT_NUMBER = 587;
 	private final String USERNAME = "nikolakobas111";
 	private final String PASSWORD = "klisa021";
 	private String from;
@@ -26,64 +34,23 @@ public class  CustomEmail {
 	private String subject;
 	private String msg;
 
-	private final List<String> SEND_TO = Arrays.asList("n.rackovic021@gmail.com");
-	
-	private  List<InternetAddress>  adresses = new ArrayList<InternetAddress>();
-	
 
 	
 	public CustomEmail() {
-		this.simpleEmail = new SimpleEmail();
-		this.simpleEmail.setHostName(HOST_NAME);
-		this.simpleEmail.setSmtpPort(PORT_NUMBER);
-		this.simpleEmail.setAuthentication(USERNAME, PASSWORD);
-		this.simpleEmail.setSSLOnConnect(true);
 		
-		try {
-			for(String address : SEND_TO) {
-				adresses.add(new InternetAddress(address));
-			}
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	
 	public CustomEmail(String from,String subject,String msg) {
-		this.simpleEmail = new SimpleEmail();
-		this.simpleEmail.setHostName(HOST_NAME);
-		this.simpleEmail.setSmtpPort(PORT_NUMBER);
-		this.simpleEmail.setAuthentication(USERNAME, PASSWORD);
-		this.simpleEmail.setSSLOnConnect(true);
+		
 		this.from = from;
 		this.subject = subject;
 		this.msg = msg;
-		try {
-			for(String address : SEND_TO) {
-				adresses.add(new InternetAddress(address));
-			}
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
 	}
 	
 	
 
-	public void sendMessage() {
-		try {
-			this.simpleEmail.setFrom(this.from,this.fromName);
-			this.simpleEmail.setSubject(this.subject);
-			this.simpleEmail.setMsg(this.msg);
-			this.simpleEmail.setTo(adresses);
-			this.simpleEmail.send();
-			
-		} catch (EmailException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	
 	public void setFrom(String from) {
 		this.from = from;
@@ -117,7 +84,38 @@ public class  CustomEmail {
 		this.fromName = fromName;
 	}
 
+	public void sendMessage() throws AddressException, MessagingException, IOException {
+		   Properties props = new Properties();
+		   props.put("mail.smtp.auth", "true");
+		   props.put("mail.smtp.starttls.enable", "true");
+		   props.put("mail.smtp.host", HOST_NAME);
+		   props.put("mail.smtp.port", PORT_NUMBER);
+		   
+		   Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+		      protected PasswordAuthentication getPasswordAuthentication() {
+		         return new PasswordAuthentication(USERNAME, PASSWORD);
+		      }
+		   });
+		   Message msg = new MimeMessage(session);
+		  
+		   InternetAddress address = new InternetAddress(this.getFrom());
+		   
+		   address.setPersonal(this.getFromName());
+		   
+		  
+		   
+		   msg.setFrom(address);
+		  
+		  
 
+		   msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("n.rackovic021@gmail.com"));
+		   msg.setSubject(this.getSubject());
+		 
+		   msg.setSentDate(new Date());
+		   msg.setText(this.getMsg());
+		  
+		   Transport.send(msg);   
+		}
 
 	
 	
