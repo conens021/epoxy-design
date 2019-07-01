@@ -48,9 +48,9 @@
 											<div class="css3-spinner-double-bounce2"></div>
 										</div>
 
-										<form 
+										<form id="create-product" 
 											class="nobottommargin" 
-											  action="/djeke-djole/upload-product" method="POST" enctype="multipart/form-data">
+											>
 
 											<div class="row">
 
@@ -60,13 +60,13 @@
 												</div>
 												<div class="col-12 bottommargin-sm">
 													<label for="productTitle">Product Title (Google)<small class="text-danger">*</small></label>
-													<input type="text" id="template-contactform-name" name="productTitle" value="" class="form-control required" placeholder="Enter product title" />
+													<input type="text" id="template-contactform-title" name="productTitle" value="" class="form-control required" placeholder="Enter product title" />
 												</div>
 												
 
 
 												<div class="col-12 bottommargin-sm">
-													<label for="category">Product Category*</label>
+													<label for="category">Product Category<small class="text-danger">*</small></label>
 													<select id="template-contactform-default-select" name="category" class="form-control">
 														<option value="0" disabled selected>Select One</option>
 														<option value="1">Tables</option>
@@ -86,7 +86,7 @@
 											
 
 												<div class="col-12 bottommargin-sm">
-													<label for="price">Product price*</label>
+													<label for="price">Product price<small class="text-danger">*</small></label>
 													<div class="input-group">
 													<div class="input-group-prepend">
 														<span class="input-group-text">$</span>
@@ -100,12 +100,13 @@
 												<div class="col-12 bottommargin-sm">
 													 <div class="d-flex align-items-center">
 														<div class="switch">
-															<input id="template-contactform-checked-switch" name="onSale" class="switch-toggle switch-toggle-round" checked type="checkbox">
+															<input id="template-contactform-checked-switch" name="onSale"
+															class="switch-toggle switch-toggle-round"  type="checkbox" >
 															<label for="template-contactform-checked-switch"></label>
 														</div>
 														<label class="media-body text-muted ml-3" for="template-contactform-checked-switch">
-													        <span class="d-block text-dark mb-1 nott ls0">Checked Switch</span>
-													        <span class="d-block nott ls0 t400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, aut?</span>
+													        <span class="d-block text-dark mb-1 nott ls0">Product On Sale</span>
+													        <span class="d-block nott ls0 t400">Cekirajte ovo ako je product na popustu</span>
 													    </label>
 												    </div>
 												  
@@ -116,16 +117,17 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text">%</span>
 													</div>
-													<input id="template-contactform-budget" name="saleAmount" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter sale amount">
+													<input id="saleAmount" name="saleAmount" type="text" class="form-control"
+													 aria-label="Amount (to the nearest dollar)" placeholder="Enter sale amount" disabled="disabled">
 													
 													</div>
 												</div>
 
 											
 
-											<div class="col-lg-12 bottommargin">
-												<label>Product Images:</label><br>
-												<input id="input-3" name="images" type="file" class="file" multiple data-show-upload="false" data-show-caption="true" data-show-preview="true">
+											<div id="images-upload-error"class="col-lg-12 bottommargin">
+												<label>Product Images:<small class="text-danger">*</small></label><br>
+												<input id="images" name="images" type="file" class="file" multiple data-show-upload="false" data-show-caption="true" data-show-preview="true">
 											</div>
 											
 												<div class="col-lg-12 bottommargin">
@@ -134,9 +136,11 @@
 												</div>
 									
 												<div class="col-12">
-													<button type="submit" class="btn btn-secondary btn-block btn-lg">Save</button>
+													<button id="submit-btn" type="submit" class="btn btn-secondary btn-block btn-lg">Save</button>
 												</div>
-
+												<div class="col-12">
+													<span id="errors" class="error">Popunite sva polja oznacena sa *</span>
+											    </div>	
 											
 
 											</div>
@@ -187,7 +191,8 @@
 	<script src="/scripts/moment.js"></script>
 	<script src="/scripts/datepicker.js"></script>
 	<script src="/scripts/timepicker.js"></script>
-
+	
+	<script src="/scripts/create-product.js"></script>
 	
 
 

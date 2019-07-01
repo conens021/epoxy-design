@@ -61,5 +61,13 @@ public class ProductRepositoryImpl{
         }
         return new Product();
     }
+    
+    
+    public Page<Product>getByName(String name,String page,String direction,String sortBy,Integer perPage){
+    	 return productRepository.findByNameLike(name, PageRequest.of(
+                 Integer.valueOf(page) -1 , perPage,
+                 direction.equalsIgnoreCase("asc")? Direction.ASC : Direction.DESC,
+                 sortBy ));
+    }
 
 }

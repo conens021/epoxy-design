@@ -21,7 +21,6 @@ import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Customer;
-import com.abstractmedia.projects.epoxydesign.model.Message;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 import com.abstractmedia.projects.epoxydesign.services.ProductRepository;
 import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
