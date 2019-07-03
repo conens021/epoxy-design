@@ -32,7 +32,8 @@
 		<link rel="stylesheet" href="/css/skin.css" type="text/css" />
 	<link rel="stylesheet" href="/css/bs-switches.css" type="text/css" />
 	<link rel="stylesheet" href="/css/bs-datatable.css" type="text/css" />
-
+    <!-- Range Slider CSS -->
+	<link rel="stylesheet" href="/css/ion.rangeslider.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title

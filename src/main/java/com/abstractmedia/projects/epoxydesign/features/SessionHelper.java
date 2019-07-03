@@ -7,7 +7,7 @@ import java.util.Map;
 import javax.servlet.http.HttpSession;
 import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-import com.abstractmedia.projects.epoxydesign.services.CategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

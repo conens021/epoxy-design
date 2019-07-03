@@ -1,4 +1,4 @@
-package com.abstractmedia.projects.epoxydesign.mode.product;
+package com.abstractmedia.projects.epoxydesign.model.product;
 
 public class ProductResponse {
 	

@@ -10,8 +10,8 @@ import com.abstractmedia.projects.epoxydesign.features.Cart;
 import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-import com.abstractmedia.projects.epoxydesign.services.ProductRepository;
-import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

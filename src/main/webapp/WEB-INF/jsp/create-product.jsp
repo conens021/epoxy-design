@@ -78,8 +78,7 @@
 													<select id="template-contactform-default-select" name="subcategory" class="form-control">
 														<option value="0" disabled selected>Select One</option>
 														<option value="1">Coffee Tables</option>
-														<option value="2">Dinner Tables</option>
-														
+														<option value="2">Dinner Tables</option>					
 													</select>
 												</div>
 												
@@ -122,7 +121,10 @@
 													
 													</div>
 												</div>
-
+											<div class="col-12 bottommargin-sm">
+													<label for="template-contactform-age" class="mb-3 clearfix">On Stock (Broj Proizvoda na Stanju)</label>
+													<input id="template-contactform-age" name="onStock" class="range_01 input-range-slider" />
+												</div>
 											
 
 											<div id="images-upload-error"class="col-lg-12 bottommargin">
@@ -187,11 +189,9 @@
 	<!-- Bootstrap Select Plugin -->
 	<script src="/scripts/bs-select.js"></script>
 
-	<!-- Date & Time Picker JS -->
-	<script src="/scripts/moment.js"></script>
-	<script src="/scripts/datepicker.js"></script>
-	<script src="/scripts/timepicker.js"></script>
-	
+
+	<!-- Range Slider Plugin -->
+	<script src="/scripts/rangeslider.min.js"></script>
 	<script src="/scripts/create-product.js"></script>
 	
 
@@ -204,22 +204,23 @@
 
 		jQuery(document).ready( function(){
 
-
-			jQuery(".select-tags").select2({
-				tags: true,
-				placeholder: "Add Values and Press Enter"
+			jQuery(".range_01").ionRangeSlider({
+				grid: true,
+				min: 1,
+				max: 100,
+				from: 20,
+				prefix: "Stock ",
+				max_postfix: "+"
 			});
 
-			jQuery('.datetimepicker1').datetimepicker();
-
-	
-
+			
+		
 
 		});
 
 
 	</script>
-
+	
 
 </body>
 </html>

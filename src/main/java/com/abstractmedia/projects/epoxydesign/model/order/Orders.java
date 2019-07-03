@@ -4,11 +4,10 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,7 +15,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Digits;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import com.abstractmedia.projects.epoxydesign.model.Customer;
@@ -37,40 +36,38 @@ public class Orders implements Serializable{
 	private Date orderDate;
 	
 	@NotNull
-
 	private BigDecimal subtotal;
 	
 	@NotNull
-
 	private BigDecimal total;
 	
-	@NotNull
-
-	private BigDecimal tax;
+	private String note;
+	
+	@Transient
+	private final float tax = 20.00f;
 	
 	
 	@NotNull
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private Customer customer;
 	
-	@OneToMany(mappedBy = "orders",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "orders",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<ProductOrders> productOrders;
 
 	public Orders() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.id = 0;
 	}
 
 	public Orders(
 			BigDecimal subtotal,
 			 BigDecimal total,
-			 BigDecimal tax,
+			String note,
 			List<ProductOrders> productOrders) {
 		super();
 	
 		this.subtotal = subtotal;
 		this.total = total;
-		this.tax = tax;
+		this.note = note;
 		for(ProductOrders producOrders : productOrders) {
 			producOrders.setOrders(this);
 		}
@@ -109,13 +106,11 @@ public class Orders implements Serializable{
 		this.total = total;
 	}
 
-	public BigDecimal getTax() {
+	public float getTax() {
 		return tax;
 	}
 
-	public void setTax(BigDecimal tax) {
-		this.tax = tax;
-	}
+
 
 	public Customer getCustomer() {
 		return customer;
@@ -140,16 +135,25 @@ public class Orders implements Serializable{
 		this.productOrders = productOrders;
 	}
 
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((customer == null) ? 0 : customer.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((note == null) ? 0 : note.hashCode());
 		result = prime * result + ((orderDate == null) ? 0 : orderDate.hashCode());
 		result = prime * result + ((productOrders == null) ? 0 : productOrders.hashCode());
 		result = prime * result + ((subtotal == null) ? 0 : subtotal.hashCode());
-		result = prime * result + ((tax == null) ? 0 : tax.hashCode());
+		result = prime * result + Float.floatToIntBits(tax);
 		result = prime * result + ((total == null) ? 0 : total.hashCode());
 		return result;
 	}
@@ -170,6 +174,11 @@ public class Orders implements Serializable{
 			return false;
 		if (id != other.id)
 			return false;
+		if (note == null) {
+			if (other.note != null)
+				return false;
+		} else if (!note.equals(other.note))
+			return false;
 		if (orderDate == null) {
 			if (other.orderDate != null)
 				return false;
@@ -185,10 +194,7 @@ public class Orders implements Serializable{
 				return false;
 		} else if (!subtotal.equals(other.subtotal))
 			return false;
-		if (tax == null) {
-			if (other.tax != null)
-				return false;
-		} else if (!tax.equals(other.tax))
+		if (Float.floatToIntBits(tax) != Float.floatToIntBits(other.tax))
 			return false;
 		if (total == null) {
 			if (other.total != null)
@@ -198,10 +204,6 @@ public class Orders implements Serializable{
 		return true;
 	}
 
-	
-
-	
-	
 	
 	
 	

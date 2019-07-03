@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 import com.abstractmedia.projects.epoxydesign.model.Category;
@@ -22,6 +24,7 @@ import org.springframework.lang.Nullable;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Date;
 import java.util.List;
 
 
@@ -49,6 +52,12 @@ public class Product implements Serializable {
 	private int saleAmount;
 	@Column(name="on_stock")
 	private int onStock;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdTime;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date lastUpdated;
 
 
 	@OneToMany(mappedBy = "product",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
@@ -84,7 +93,7 @@ public class Product implements Serializable {
 	
 	public Product( String name, String title, String description, BigDecimal price, Boolean sale,
 			int saleAmount, int onStock, List<ProductImages> images,
-			 int quantity) {
+			 int quantity,Date createdTime,Date lastUpdated) {
 	
 		
 		this.name = name;
@@ -95,9 +104,9 @@ public class Product implements Serializable {
 		this.saleAmount = saleAmount;
 		this.onStock = onStock;
 		this.images = images;
-
-	
+		this.createdTime =createdTime;
 		this.quantity = quantity;
+		this.lastUpdated = lastUpdated;
 	}
 
 
@@ -277,6 +286,26 @@ public class Product implements Serializable {
 
 	
 	
+	
+
+	public Date getLastUpdated() {
+		return lastUpdated;
+	}
+
+
+	public void setLastUpdated(Date lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
+
+
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
 
 
 	public List<ProductOrders> getProductOrders() {

@@ -84,13 +84,7 @@
 									<span id="error-phone" class="error">Phone number not valid</span>
 								
 							</div>
-							<div class="col_full col_last">
-								<form:label path="personalId">*Personal ID Number:</form:label>
-								<form:input type="text" required="required" id="billing-form-phone" path="personalId" value=""
-									class="sm-form-control" />
-								<span id="error-id" class="error">Personal id is not valid</span>
-								
-							</div>
+					
 							<div class="col_full">
 								<form:label path="note">Notes </form:label>
 								<form:textarea class="sm-form-control" id="shipping-form-message"

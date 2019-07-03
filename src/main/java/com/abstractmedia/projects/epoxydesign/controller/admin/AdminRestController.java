@@ -6,12 +6,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,15 +22,15 @@ import org.springframework.web.multipart.MultipartFile;
 import com.abstractmedia.projects.epoxydesign.features.randomString.Chars;
 import com.abstractmedia.projects.epoxydesign.features.randomString.Size;
 import com.abstractmedia.projects.epoxydesign.features.randomString.StringPatterns;
-import com.abstractmedia.projects.epoxydesign.mode.product.ProductResponse;
 import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Subcategory;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 import com.abstractmedia.projects.epoxydesign.model.product.ProductImages;
+import com.abstractmedia.projects.epoxydesign.model.product.ProductResponse;
 import com.abstractmedia.projects.epoxydesign.model.product.ProductValidation;
-import com.abstractmedia.projects.epoxydesign.services.CategoryRepository;
-import com.abstractmedia.projects.epoxydesign.services.ProductRepository;
-import com.abstractmedia.projects.epoxydesign.services.SubcategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.SubcategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
 
 @RestController
 public class AdminRestController {
@@ -59,7 +61,8 @@ public class AdminRestController {
 											 @RequestParam(name="onSale",required=false) Boolean onSale,
 											 @RequestParam(name="saleAmount",required=false) String saleAmount,
 											 @RequestParam(name="price",required=false) String price,
-											 @RequestParam(name="description",required=false) String description
+											 @RequestParam(name="description",required=false) String description,
+											 @RequestParam(name="onStock",required=false) String onStock
 											 ) {
 		
 		List<ProductImages> images = new ArrayList<>();
@@ -99,8 +102,10 @@ public class AdminRestController {
 			return new ResponseEntity<ProductResponse>(productResponse,HttpStatus.NOT_ACCEPTABLE);
 		}
 		
+		p.setOnStock(Integer.valueOf(onStock));
 		
-		
+		p.setCreatedTime(new Date());
+		p.setLastUpdated(new Date());
 	
 		Optional<Category> prodCategory = categoryRepository.findById(category);
 		
@@ -154,6 +159,9 @@ public class AdminRestController {
 		}
 		
 	}
+	
+	
+	
 	
 	
 	public static boolean isNumeric(String str) { 

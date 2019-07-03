@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 
 @RestController
 public class ProductRestController {

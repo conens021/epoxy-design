@@ -1,16 +1,18 @@
 
 
 $("#place-order").click(function(event){
+	$("#place-order").prop("disabled",true);
 	$formisValid = false;
 	if($("#checkbox-10").is(":checked")){
 		$("input").each(function(key,element){
 			if($(element).is(":required") ){
 				
-			
+	
 				
 				if( !validate(element)){
 					console.log($(element).attr("name") + " not valid");
 					$formisValid = false;
+					$("#place-order").prop("disabled",false);
 					return;
 				}else{
 					$formisValid = true;
@@ -25,11 +27,13 @@ $("#place-order").click(function(event){
 			$("#order-form").submit();
 		}
 		else{
+			$("#place-order").prop("disabled",false);
 			console.log("not valid");
 		}
 	}
 	else{
 		console.log("not valid");
+		$("#place-order").prop("disabled",false);
 		$("#check-error").css("display","block");
 	}
 })

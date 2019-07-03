@@ -1,4 +1,4 @@
-package com.abstractmedia.projects.epoxydesign.services;
+package com.abstractmedia.projects.epoxydesign.services.product;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

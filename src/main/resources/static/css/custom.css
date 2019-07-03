@@ -1,4 +1,37 @@
+	.table-right-justify td{
+		text-align:justify;
+	}
 
+	.admin-href{
+		color: #2980b9;
+	}
+
+	.file-caption.icon-visible .file-caption-name {
+			font-family: 'Lato', sans-serif;
+			color: #666;
+		}
+	.form-process {
+		position: absolute;
+		-webkit-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+		background-image: none;
+	}
+
+	.form-process > div { background-color: #999;  }
+
+	.form-process,
+	#template-contactform-submitted,
+	.template-contactform-complete .form-process {
+		display: none;
+		opacity: 0;
+		background-color: rgba(255,255,255,0.7);
+	}
+
+	.template-contactform-processing .form-process {
+		display: block;
+		opacity: 1;
+	}
 .pointer{
 	cursor:pointer;
 }

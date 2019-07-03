@@ -1,4 +1,4 @@
-package com.abstractmedia.projects.epoxydesign.services;
+package com.abstractmedia.projects.epoxydesign.services.categories;
 
 import java.util.Optional;
 

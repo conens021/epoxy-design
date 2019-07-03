@@ -4,6 +4,7 @@ package com.abstractmedia.projects.epoxydesign.controller;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,8 @@ import com.abstractmedia.projects.epoxydesign.model.Customer;
 import com.abstractmedia.projects.epoxydesign.model.order.Orders;
 import com.abstractmedia.projects.epoxydesign.model.order.ProductOrders;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-import com.abstractmedia.projects.epoxydesign.services.OrdersRepository;
+import com.abstractmedia.projects.epoxydesign.services.customer.CustomersRepositoryImpl;
+import com.abstractmedia.projects.epoxydesign.services.orders.OrdersRepository;
 
 @Controller
 public class OrderController {
@@ -38,6 +40,9 @@ public class OrderController {
 	
 	@Autowired
 	private OrdersRepository ordersRepisotry;
+	
+	@Autowired
+	private CustomersRepositoryImpl customersRepositoryImpl;
 	
 	@Autowired 
 	private Cart cart;
@@ -78,9 +83,17 @@ public class OrderController {
 		}
 		
 		
-		Orders order = new Orders(subtotal, total, tax, productOrders);
-		order.setCustomer(customer);
+		Orders order = new Orders(subtotal, total, customer.getNote(),productOrders);
+		Customer customerFromDb = customersRepositoryImpl.getByEmail(customer.getEmail());
 		
+		if(customerFromDb.getId() != 0)
+			order.setCustomer(customerFromDb);
+		else {
+			order.setCustomer(customer);
+		}
+		
+		
+		order.setOrderDate(new Date());
 		
 		Orders savedOrder = ordersRepisotry.save(order);
 		

@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 import javax.servlet.http.HttpSession;
 
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,7 +25,7 @@ public class Cart {
     ProductRepositoryImpl productRepositoryImpl;
 
 
-    private final float TAX = 5.00f; 
+    private final float TAX = 20.00f; 
 
     public List<Product> getCartItems(Map<Integer, Product> cart) {
         List<Product> list = new ArrayList<>();

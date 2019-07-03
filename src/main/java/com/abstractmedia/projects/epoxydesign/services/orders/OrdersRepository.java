@@ -1,4 +1,4 @@
-package com.abstractmedia.projects.epoxydesign.services;
+package com.abstractmedia.projects.epoxydesign.services.orders;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

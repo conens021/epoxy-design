@@ -9,10 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.abstractmedia.projects.epoxydesign.model.order.Orders;
 
@@ -40,14 +40,13 @@ public class Customer implements Serializable {
 	@Email(message = "Email not valid")
 	private String email;
 	
+	@Transient
 	private String note;
 	
 	@NotNull(message = "Cannot be empty")
 	private String phoneNumber;
 	
-	@NotNull
-	@Size(min=6,message="Not valid personal id")
-	private String personalId;
+
 	
 	private String company;
 	
@@ -59,8 +58,8 @@ public class Customer implements Serializable {
 	
 
 	public Customer() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.id  = 0;
+		
 	}
 
 
@@ -70,9 +69,7 @@ public class Customer implements Serializable {
 			@NotNull(message = "Cannot be empty") @Min(value = 2, message = "First name to short (min 2 characters)") String firstName,
 			@NotNull(message = "Cannot be empty") @Min(value = 2, message = "Last name to short (min 2 characters)") String lastName,
 			@NotNull(message = "Cannot be empty") @Email(message = "Email not valid") String email, String note,
-			@NotNull(message = "Cannot be empty") String phoneNumber,
-			@NotNull @Size(min = 6, message = "Not valid personal id") String personalId, String company,
-			List<Orders> orders) {
+			@NotNull(message = "Cannot be empty") String phoneNumber, String company,List<Orders> orders) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -80,16 +77,10 @@ public class Customer implements Serializable {
 		this.email = email;
 		this.note = note;
 		this.phoneNumber = phoneNumber;
-		this.personalId = personalId;
+	
 		this.company = company;
 		this.orders = orders;
 	}
-
-
-
-
-
-
 
 
 	public int getId() {
@@ -209,30 +200,6 @@ public class Customer implements Serializable {
 	}
 
 
-
-
-	public String getPersonalId() {
-		return personalId;
-	}
-
-
-
-
-
-
-
-
-	public void setPersonalId(String personalId) {
-		this.personalId = personalId;
-	}
-
-
-
-
-
-
-
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -244,15 +211,9 @@ public class Customer implements Serializable {
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((note == null) ? 0 : note.hashCode());
 		result = prime * result + ((orders == null) ? 0 : orders.hashCode());
-		result = prime * result + ((personalId == null) ? 0 : personalId.hashCode());
 		result = prime * result + ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
 		return result;
 	}
-
-
-
-
-
 
 
 
@@ -297,11 +258,6 @@ public class Customer implements Serializable {
 				return false;
 		} else if (!orders.equals(other.orders))
 			return false;
-		if (personalId == null) {
-			if (other.personalId != null)
-				return false;
-		} else if (!personalId.equals(other.personalId))
-			return false;
 		if (phoneNumber == null) {
 			if (other.phoneNumber != null)
 				return false;
@@ -311,19 +267,5 @@ public class Customer implements Serializable {
 	}
 
 
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
 
 }

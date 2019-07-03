@@ -21,9 +21,9 @@ import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Subcategory;
-import com.abstractmedia.projects.epoxydesign.services.CategoryRepository;
-import com.abstractmedia.projects.epoxydesign.services.ProductRepositoryImpl;
-import com.abstractmedia.projects.epoxydesign.services.SubcategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.SubcategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 
 @Controller

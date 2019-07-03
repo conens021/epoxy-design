@@ -56,12 +56,12 @@
 									<th class="pointer" onclick="sort('name')">Product <i id="name" class="sorting"></i> </th>
 									<th class="pointer" onclick="sort('onStock')">On Stock <i id="onStock" class="sorting"></i></th>
 									<th class="pointer" onclick="sort('price')">Price <i id="price" class="sorting"></i></th>
-									<th class="pointer" onclick="sort('onSale')">On Sale <i id="onSale"></i></th>
+									<th class="pointer" onclick="sort('sale')">On Sale <i id="sale"></i></th>
 									<th class="pointer" onclick="sort('saleAmount')">Sale Amount <i id="saleAmount" class="sorting"></i></th>
 									<th class="pointer" onclick="sort('prodCategory')">Category <i id="prodCategory" class="sorting"></i></th>
 									<th class="pointer" onclick="sort('subcategory')">Subcategory <i id="subcategory" class="sorting"></i></th>
-									<th>Created</th>
-									<th>Last Update</th>
+									<th class="pointer" onclick="sort('createdTime')">Created <i id="createdTime" class="sorting"></i></th>
+									<th class="pointer" onclick="sort('lastUpdated')">Last Update <i id="lastUpdated" class="sorting"></i></th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -97,6 +97,8 @@
 												${product.getSubcategory().getName() }
 											</c:if>
 										</td>
+										<td>${product.getCreatedTime() }</td>
+										<td>${product.getLastUpdated() }</td>
 								</tr>
 							</c:forEach>
 							

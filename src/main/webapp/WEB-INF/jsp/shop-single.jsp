@@ -64,7 +64,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sale-flash">Sale!</div>
+                                <c:if test="${product.onSale()}">
+                                	 <div class="sale-flash">Sale!</div>
+                                </c:if>
+                               
                             </div><!-- Product Single - Gallery End -->
 
                         </div>

@@ -66,12 +66,12 @@
                             <div>List Products</div>
                         </a>
                      </li>
-     				 	 <li><a href="/admin/create-product">
+     				 	 <li><a href="/djeke-djole/orders">
                             <div>Orders</div>
                         </a>
                      </li>
 					 </li>
-     				 	 <li><a href="/admin/create-product">
+     				 	 <li><a href="/djeke-djole/customers">
                             <div>Customers</div>
                         </a>
                      </li>
