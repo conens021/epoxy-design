@@ -1,6 +1,6 @@
   <!-- Header
                 ============================================= -->
-            <header id="header" class="transparent-header dark">
+            <header id="header" class="full-header transparent-header">
                 <!-- Top Bar
             ============================================= -->
                 <div id="top-bar" class="" style="background: transparent">
@@ -48,7 +48,7 @@
                         <!-- Logo
                         ============================================= -->
                         <div id="logo">
-                            <a href="/" class="standard-logo">Epoxy Design</a>
+                            <a href="/" class="standard-logo" style="color:#EEE">Epoxy Design</a>
 
                         </div><!-- #logo end -->
 

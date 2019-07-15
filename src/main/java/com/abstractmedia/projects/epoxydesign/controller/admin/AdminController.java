@@ -72,7 +72,7 @@ public class AdminController {
 	
 	@GetMapping("/djeke-djole/orders")
 	public String getOrders(@RequestParam(name="page",required = false,defaultValue = "1")String page,
-							@RequestParam(name="sd",required = false,defaultValue = "ASC")String sd,
+							@RequestParam(name="sd",required = false,defaultValue = "DESC")String sd,
 							@RequestParam(name="sb",required = false,defaultValue = "orderDate")String sb,
 							Model model) {
 		

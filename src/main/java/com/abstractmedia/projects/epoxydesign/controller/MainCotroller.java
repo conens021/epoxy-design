@@ -56,8 +56,8 @@ public class MainCotroller {
 	@GetMapping("/products")
 	public String getShop(Model model,HttpSession session,
 							@RequestParam(value="page",required = false,defaultValue = "1") String page,
-							@RequestParam(value="sb",required = false,defaultValue = "onStock")String sortBy,
-							@RequestParam(value="sd",required = false,defaultValue = "ASC")String direction) {
+							@RequestParam(value="sb",required = false,defaultValue = "saleAmount")String sortBy,
+							@RequestParam(value="sd",required = false,defaultValue = "DESC")String direction) {
 	
 		
 		Page<Product> products = productRepositoryImpl.findAllProducts(page, direction, sortBy,20);

@@ -25,8 +25,12 @@
 
 	<link rel="stylesheet" href="/css/colors.css" type="text/css" />
 	<link rel="stylesheet" href="/css/fonts.css" type="text/css" />
-	<link rel="stylesheet" href="/css/index-custom.css">
+	
+	<link rel="stylesheet" href="/css/settings.css" media="screen">
+	<link rel="stylesheet" href="/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="/css/revolution.addon.particles.css">
 	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/index-custom.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,11 +40,7 @@
 	<!-- Document Title
         ============================================= -->
 	<title>Epoxy Design | Everything You need for your Home or Business</title>
-	<style>
-		#header.dark.sticky-header.transparent-header #header-wrap:not (.not-dark) {
-			background: #1C1C1C;
-		}
-	</style>
+
 </head>
 
 <body class="stretched">
@@ -50,50 +50,554 @@
 	<div id="wrapper" class="clearfix">
 
 		<%@include file="templates/header.jsp"%>
+	
+	
+		
+	<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element revslider-wrap full-screen clearfix">
 
-		<!--Video Poster-->
-		<section id="slider" class="slider-element slider-parallax full-screen force-full-screen ohidden"
-			style="height: 100vh">
+			<div id="rev_slider_17_1_wrapper" 
+					class="rev_slider_wrapper fullscreen-container" 
+					data-alias="duotone1" style="background-color:transparent;padding:0px;">
+				<!-- START REVOLUTION SLIDER 5.2.5.4 fullscreen mode -->
+				<div id="rev_slider_17_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.2.5.4">
+					<ul>	<!-- SLIDE  -->
+						<li class="dark" data-index="rs-69" data-transition="cube" 
+						data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" 
+						 data-easein="default" data-easeout="default" data-masterspeed="default"  
+						 data-thumb="include/rs-plugin/demos/assets/images/100x50_duo5_w.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+							<!-- MAIN IMAGE -->
+							<img src="/images/dummy.png"  alt="" 
+							 data-lazyload="/images/slider01.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<!-- LAYERS -->
 
-			<div class="slider-parallax-inner">
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-69-layer-1"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
+											data-fontsize="['60','60','40','20']"
+								data-lineheight="['70','70','50','30']"
+								data-width="['720','640','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
 
-				<div class="full-screen force-full-screen section nopadding nomargin noborder ohidden">
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
 
-					<div class="container clearfix">&nbsp;</div>
-					<div class="video-wrap">
-						<video poster="images/explore.jpg" preload="auto" loop autoplay muted>
-							<source src='images/explore.mp4' type='video/mp4' />
-							<source src='images/explore.webm' type='video/webm' />
-						</video>
+								style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;letter-spacing:10px;">WALKING<br/>
+					THE CITY </div>
+
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-69-layer-2"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
+											data-fontsize="['17','17','17','15']"
+								data-lineheight="['26','26','26','24']"
+								data-width="['720','480','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:10px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="700"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption rev-btn  rs-parallaxlevel-4"
+								 id="slide-69-layer-4"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['133','159','141','102']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+									data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+									data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="900"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+								data-responsive_offset="off"
+								data-responsive="off"
+
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+						</li>
+						<!-- SLIDE  2-->
+						<li class="dark" data-index="rs-70" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo4_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+							<!-- MAIN IMAGE -->
+							<img src="/images/dummy.png"  alt=""  
+							data-lazyload="/images/slider02.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<!-- LAYERS -->
+
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-70-layer-1"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
+											data-fontsize="['60','60','40','20']"
+								data-lineheight="['70','70','50','30']"
+								data-width="['720','640','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;letter-spacing:10px;">FOREST<BR/>
+					EXPLORATION </div>
+
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-70-layer-2"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
+											data-fontsize="['17','17','17','15']"
+								data-lineheight="['26','26','26','24']"
+								data-width="['720','480','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:10px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="700"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption rev-btn  rs-parallaxlevel-4"
+								 id="slide-70-layer-4"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['133','159','141','102']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+									data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+									data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="900"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+								data-responsive_offset="off"
+								data-responsive="off"
+
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+						</li>
+						<!-- SLIDE 3 -->
+						<li class="dark" data-index="rs-71" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo3_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+							<!-- MAIN IMAGE -->
+							<img src="/images/dummy.png"  alt=""  
+							data-lazyload="/images/slider03.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<!-- LAYERS -->
+
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-71-layer-1"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
+											data-fontsize="['60','60','40','20']"
+								data-lineheight="['70','70','50','30']"
+								data-width="['720','640','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="text-align: center;;z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;letter-spacing:10px;">CURIOSITY<BR/>
+					REWARDED </div>
+
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-71-layer-2"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
+											data-fontsize="['17','17','17','15']"
+								data-lineheight="['26','26','26','24']"
+								data-width="['720','480','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:10px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="700"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption rev-btn  rs-parallaxlevel-4"
+								 id="slide-71-layer-4"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['133','159','141','102']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+									data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+									data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="900"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+								data-responsive_offset="off"
+								data-responsive="off"
+
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+						</li>
+						<!-- SLIDE  4-->
+						<li class="dark" data-index="rs-72" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo2_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+							<!-- MAIN IMAGE -->
+							<img src="/images/dummy.png"  alt="" 
+							 data-lazyload="/images/slider04.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<!-- LAYERS -->
+
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-72-layer-1"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
+											data-fontsize="['60','60','40','20']"
+								data-lineheight="['70','70','50','30']"
+								data-width="['720','640','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;letter-spacing:10px;">BE UNIQUE<br/>
+					STICK OUT </div>
+
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-72-layer-2"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
+											data-fontsize="['17','17','17','15']"
+								data-lineheight="['26','26','26','24']"
+								data-width="['720','480','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:10px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="700"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption rev-btn  rs-parallaxlevel-4"
+								 id="slide-72-layer-4"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['133','159','141','102']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+									data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+									data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="900"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+								data-responsive_offset="off"
+								data-responsive="off"
+
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+						</li>
+						<!-- SLIDE  5-->
+						<li class="dark" data-index="rs-73" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo1_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+							<!-- MAIN IMAGE -->
+							<img src="/images/dummy.png"  alt=""  
+							data-lazyload="/images/slider05.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<!-- LAYERS -->
+
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-73-layer-1"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
+											data-fontsize="['60','60','40','20']"
+								data-lineheight="['70','70','50','30']"
+								data-width="['720','640','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;letter-spacing:10px;">VAPE<br/>
+					NATION </div>
+
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-73-layer-2"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
+											data-fontsize="['17','17','17','15']"
+								data-lineheight="['26','26','26','24']"
+								data-width="['720','480','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:10px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="700"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption rev-btn  rs-parallaxlevel-4"
+								 id="slide-73-layer-4"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['133','159','141','102']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+									data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+									data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="900"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+								data-responsive_offset="off"
+								data-responsive="off"
+
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+						</li>
+						<!-- SLIDE  6-->
+						<li class="dark" data-index="rs-74" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo6_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+							<!-- MAIN IMAGE -->
+							<img src="/images/dummy.png"  alt=""  
+							data-lazyload="/images/slider06.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<!-- LAYERS -->
+
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-74-layer-1"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-100']"
+											data-fontsize="['60','60','40','20']"
+								data-lineheight="['70','70','50','30']"
+								data-width="['720','640','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="500"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px; font-weight: 700; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;letter-spacing:10px;">GALACTIC<br/>
+					COOLNESS </div>
+
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption   rs-parallaxlevel-4"
+								 id="slide-74-layer-2"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['44','57','39','0']"
+											data-fontsize="['17','17','17','15']"
+								data-lineheight="['26','26','26','24']"
+								data-width="['720','480','480','300']"
+								data-height="none"
+								data-whitespace="normal"
+								data-transform_idle="o:1;"
+
+								 data-transform_in="y:10px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="700"
+								data-splitin="none"
+								data-splitout="none"
+								data-responsive_offset="off"
+								data-responsive="off"
+								data-textAlign="center"
+
+								style="z-index: 6; min-width: 720px; max-width: 720px; white-space: normal; font-size: 17px; line-height: 26px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;text-align:center;">Post-ironic authentic drinking vinegar chambray quinoa. VHS letterpress sriracha, tacos skateboard migas farm-to-table artisan kombucha.  </div>
+
+							<!-- LAYER NR. 3 -->
+							<div class="tp-caption rev-btn  rs-parallaxlevel-4"
+								 id="slide-74-layer-4"
+								 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+								 data-y="['middle','middle','middle','middle']" data-voffset="['133','159','141','102']"
+											data-width="none"
+								data-height="none"
+								data-whitespace="nowrap"
+								data-transform_idle="o:1;"
+									data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:0;e:Linear.easeNone;"
+									data-style_hover="c:rgba(0, 0, 0, 1.00);bg:rgba(238, 238, 238, 1.00);"
+
+								 data-transform_in="y:20px;sX:0.9;sY:0.9;opacity:0;s:1000;e:Power4.easeOut;"
+								 data-transform_out="opacity:0;s:300;"
+								data-start="900"
+								data-splitin="none"
+								data-splitout="none"
+								data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+								data-responsive_offset="off"
+								data-responsive="off"
+
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+						</li>
+					</ul>
+					<div style="" class="tp-static-layers">
+
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-15 tp-static-layer"
+							 id="slider-17-layer-1"
+							 data-x="['left','left','left','left']" data-hoffset="['-750','-750','-750','-750']"
+							 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['-1850','-1850','-1850','-1850']"
+										data-width="1500"
+							data-height="1500"
+							data-whitespace="nowrap"
+							data-visibility="['on','on','off','off']"
+							data-transform_idle="o:1;rZ:45;"
+
+							 data-transform_in="opacity:0;s:300;e:Power2.easeInOut;"
+							 data-transform_out="opacity:0;s:300;"
+							data-start="0"
+							data-basealign="slide"
+							data-responsive_offset="off"
+							data-responsive="off"
+							data-startslide="0"
+							data-endslide="5"
+
+							style="z-index: 5;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 0);"> </div>
+
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption tp-shape tp-shapewrapper  rs-parallaxlevel-15 tp-static-layer"
+							 id="slider-17-layer-2"
+							 data-x="['right','right','right','right']" data-hoffset="['-750','-750','-750','-750']"
+							 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['-1850','-1850','-1850','-1850']"
+										data-width="1500"
+							data-height="1500"
+							data-whitespace="nowrap"
+							data-visibility="['on','on','off','off']"
+							data-transform_idle="o:1;rZ:45;"
+
+							 data-transform_in="opacity:0;s:300;e:Power2.easeInOut;"
+							 data-transform_out="opacity:0;s:300;"
+							data-start="0"
+							data-basealign="slide"
+							data-responsive_offset="off"
+							data-responsive="off"
+							data-startslide="0"
+							data-endslide="5"
+
+							style="z-index: 6;background-color:rgba(255, 255, 255, 1.00);border-color:rgba(0, 0, 0, 0);">
+						</div>
 					</div>
-
+					<div class="tp-bannertimer" style="height: 8px; background-color: rgba(255, 255, 255, 0.25);"></div>
 				</div>
-
-			</div>
-
+			</div><!-- END REVOLUTION SLIDER -->
 		</section>
-
+	
 
 		<!-- Welcome Section
             
             ============================================= -->
 		<div id="welcome">
+		
 			<section id="content" class="welcome-header section-padding">
 
 				<div class="site-wrapper">
 
 					<div class="container clearfix ">
-						<h1 data-aos="fade-up" data-aos-duration="800" class="light">Welcome</h1>
+						<h1 class="light" data-animate="bounce">Welcome</h1>
 
-						<p data-aos="fade-up" data-aos-duration="800">Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Eos quisquam quas porro maxime
-							assumenda, accusantium necessitatibus quo officiis! Sed magni
-							ratione accusamus modi sint. Tempora quaerat ipsum pariatur
-							officiis dolorem.>Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Eos quisquam quas porro maxime
-							assumenda, accusantium necessitatibus quo officiis! Sed magni
-							ratione accusamus modi sint. Tempora quaerat ipsum pariatur
-							officiis dolorem</p>
+						<p data-animate="fadeInUp">We produce unique hand made furniture that is made out of metal,wood and epoxy resin. 
+							We are a small start up company ,but with each new day we get stronger and bigger,and every single day our number of projects grows.
+							We are here to make your wishes come true , and to turn your dreams into reality.
+							We take the wishes of our clients very seriously , and because of that we aproach every project with just right type of creativity and imagionation,and to back that all up , we put in hours of work and effort.
+							We can equip your home,office and all types of catering faciliies.</p>
 					</div>
 
 				</div>
@@ -113,14 +617,13 @@
 				<div class="site-wrapper">
 
 					<div class="container clearfix ">
-						<h2 data-aos="fade-up" data-aos-duration="800" class="light">Custom Design</h2>
-						<img data-aos="fade-up" data-aos-duration="800" src="/images/custom-desing.svg"
-							style="width: 100px">
-						<p data-aos="fade-up" data-aos-duration="800">Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Eos quisquam quas porro maxime
-							assumenda, accusantium necessitatibus quo officiis! Sed magni
-							ratione accusamus modi sint. Tempora quaerat ipsum pariatur
-							officiis dolorem.</p>
+						<h2  class="light" data-animate="fadeInUp">Custom Design</h2>
+						<img  src="/images/custom-desing.svg"
+							style="width: 100px" data-animate="fadeInUp">
+						<p data-animate="fadeInUp">
+							We offer wide variety of products made out of wood and epoxy resin.
+							The custom option is made so you can chose,change and pick every single detail,type of wood (Oak,Cherry,Beech,Walnut etc.) ,you can pick the color of wood,shape,color of epoxy resin ,type of table legs , color of table legs etc.
+							We make tables,bars,cup holders,cutting boards,lamps etc.</p>
 					</div>
 
 				</div>
@@ -129,105 +632,7 @@
 			<!-- #Custom design end -->
 		</div>
 
-		<!-- Content
-            ============================================= -->
-		<div id="services">
-			<section id="content" class="services">
-
-				<div class="site-wrapper" style="padding-top:10em">
-
-					<h2 data-animate="fadeInUp" class="text-center">Our Services</h2>
-
-					<div class="row grid-container" data-layout="masonry" style="overflow: visible">
-						
-						<div class="col-lg-4 mb-4">
-							<div class="flip-card text-center">
-								<div class="flip-card-front dark" data-height-xl="505"
-									style="background-image: url('/images/service1.jpg');">
-									<div class="flip-card-inner">
-										<div class="card nobg noborder text-center">
-											<div class="card-body">
-												
-												<h3 class="card-title  mb-lg-5">Special title treatment</h3>
-												<p class="card-text t400">With supporting text below as a natural
-													lead-in to additional content.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="flip-card-back" data-height-xl="505"
-								style="background-color:#121212">
-									<div class="flip-card-inner">
-										<p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing
-											elit. Alias cum repellat velit.</p>
-										<a href="/products"> 
-										<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 mb-4">
-							<div class="flip-card text-center">
-								<div class="flip-card-front dark" data-height-xl="505"
-									style="background-image: url('/images/service2.jpg');">
-									<div class="flip-card-inner">
-										<div class="card nobg noborder text-center">
-											<div class="card-body">
-												<h3 class="card-title mb-lg-5">Special title treatment</h3>
-												<p class="card-text t400">With supporting text below as a natural
-													lead-in to additional content.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="flip-card-back" data-height-xl="505"
-								style="background-color:#121212">
-									<div class="flip-card-inner">
-										<p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing
-											elit. Alias cum repellat velit.</p>
-											<a href="/products"> 
-												<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
-											</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 mb-4">
-							<div class="flip-card text-center">
-								<div class="flip-card-front dark" data-height-xl="505"
-									style="background-image: url('/images/service3.jpg');">
-									<div class="flip-card-inner">
-										<div class="card nobg noborder text-center">
-											<div class="card-body">
-												
-												<h3 class="card-title  mb-lg-5">Special title treatment</h3>
-												<p class="card-text t400">With supporting text below as a natural
-													lead-in to additional content.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="flip-card-back" data-height-xl="505"
-									style="background-color:#121212">
-									<div class="flip-card-inner">
-										<p class="mb-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing
-											elit. Alias cum repellat velit.</p>
-											<a href="/products"> 
-												<button type="button" class="btn btn-outline-light mt-2">Visit Shop</button>
-											</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</section>
-			<!-- #content end -->
-		</div>
-		<!--Services end-->
+		
 
 		<div id="contact">
 			<!-- Contact Form & Map Overlay Section
@@ -242,7 +647,7 @@
 					<div  id="contact-form-overlay-mini" class="clearfix">
 
 						<div class="fancy-title title-dotted-border">
-							<h3>Contact Us</h3>
+							<h3 data-animate="fadeInUp">Contact Us</h3>
 						</div>
 
 						<div class="form-widget">
@@ -343,18 +748,139 @@
 	<!-- External JavaScripts
             ============================================= -->
 	<script src="/scripts/jquery.js"></script>
+	
+		<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script src="/scripts/jquery.themepunch.tools.min.js"></script>
+	<script src="/scripts/jquery.themepunch.revolution.min.js"></script>
+	<script src="/scripts/revolution.addon.particles.min.js"></script>
+	
+	<script src="/scripts/revolution.extension.actions.min.js"></script>
+	<script src="/scripts/revolution.extension.carousel.min.js"></script>
+	<script src="/scripts/revolution.extension.kenburn.min.js"></script>
+	<script src="/scripts/revolution.extension.migration.min.js"></script>
+	<script src="/scripts/revolution.extension.parallax.min.js"></script>
+	<script src="/scripts/revolution.extension.slideanims.min.js"></script>
+	<script src="/scripts/revolution.extension.layeranimation.min.js"></script>
+	<script src="/scripts/revolution.extension.navigation.min.js"></script>
+	<script src="/scripts/revolution.extension.video.min.js"></script>	
+	
 	<script src="/scripts/plugins.js"></script>
 	<script src="/scripts/load-more.js"></script>
 	<script src="/scripts/send-message.js"></script>
-	<script>AOS.init();</script>
+	
+	
 	<!-- Footer Scripts
             ============================================= -->
 	<script src="/scripts/functions.js"></script>
+
 	   <script>
 	            $(document).ready(function(){
 	            	$("#footer-year").text( (new Date).getFullYear() );
 	            })
-            </script>
+        </script>
+       <script>
+		var tpj=jQuery;
+
+		var revapi17;
+		tpj(document).ready(function() {
+			if(tpj("#rev_slider_17_1").revolution == undefined){
+				revslider_showDoubleJqueryError("#rev_slider_17_1");
+			}else{
+				revapi17 = tpj("#rev_slider_17_1").show().revolution({
+					sliderType:"standard",
+					jsFileLocation:"include/rs-plugin/js/",
+					sliderLayout:"fullscreen",
+					dottedOverlay:"none",
+					delay:9000,
+					navigation: {
+						keyboardNavigation:"off",
+						keyboard_direction: "horizontal",
+						mouseScrollNavigation:"off",
+						 mouseScrollReverse:"default",
+						onHoverStop:"off",
+						touch:{
+							touchenabled:"on",
+							swipe_threshold: 75,
+							swipe_min_touches: 1,
+							swipe_direction: "horizontal",
+							drag_block_vertical: false
+						}
+						,
+						arrows: {
+							style:"uranus",
+							enable:true,
+							hide_onmobile:true,
+							hide_under:767,
+							hide_onleave:false,
+							tmp:'',
+							left: {
+								h_align:"left",
+								v_align:"center",
+								h_offset:20,
+								v_offset:0
+							},
+							right: {
+								h_align:"right",
+								v_align:"center",
+								h_offset:20,
+								v_offset:0
+							}
+						}
+						,
+						bullets: {
+							enable:true,
+							hide_onmobile:false,
+							style:"hermes",
+							hide_onleave:false,
+							direction:"horizontal",
+							h_align:"center",
+							v_align:"bottom",
+							h_offset:0,
+							v_offset:20,
+							space:5,
+							tmp:''
+						}
+					},
+					responsiveLevels:[1170,1024,778,480],
+					visibilityLevels:[1170,1024,778,480],
+					gridwidth:[1200,1024,778,480],
+					gridheight:[800,768,960,720],
+					lazyType:"smart",
+					parallax: {
+						type:"scroll",
+						origo:"slidercenter",
+						speed:1000,
+						levels:[5,10,15,20,25,30,35,40,45,46,47,-60,-70,200,-120,55],
+						type:"scroll",
+						disable_onmobile:"on"
+					},
+					shadow:0,
+					spinner:"off",
+					stopLoop:"off",
+					stopAfterLoops:-1,
+					stopAtSlide:-1,
+					shuffle:"off",
+					autoHeight:"off",
+					fullScreenAutoWidth:"off",
+					fullScreenAlignForce:"off",
+					fullScreenOffsetContainer: "",
+					fullScreenOffset: "",
+					hideThumbsOnMobile:"off",
+					hideSliderAtLimit:0,
+					hideCaptionAtLimit:0,
+					hideAllCaptionAtLilmit:0,
+					debugMode:false,
+					fallbacks: {
+						simplifyAll:"off",
+						nextSlideOnWindowFocus:"off",
+						disableFocusListener:false,
+					}
+				});
+			}
+		});	/*ready*/
+	</script>
+        
+        
 
 </body>
 

@@ -56,6 +56,9 @@ public class ProductController {
                 model.addAttribute("cartTotal", cart.calcCartSubTotal(cartItems));
         		model.addAttribute("title",
     					String.format("%s - %s", product.get().getTitle(), DomainInfo.getDomainName()));
+        		 model.addAttribute("description", "Bla bla");
+        		 String fbImage = product.get().getImages().get(0).getImageUrl();
+        		 model.addAttribute("fbImage",fbImage);
                 return "shop-single";
             }
     		model.addAttribute("title",

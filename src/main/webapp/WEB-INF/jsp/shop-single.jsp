@@ -1,5 +1,49 @@
-<%@include file="templates/top.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
 
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Nemanja Rackovic" />
+        <meta property="og:url" content="http://www.epoxydesignshop.com/product/${product.getId() }-${product.getName()}" />
+		<meta property="og:type"  content="website" />
+		<meta property="og:title"  content="${title }" />
+		<meta property="og:description"  content="${description }" />
+		<meta property="og:image"   content="http://www.epoxydesignshop.com/images/${fbImage}" />
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Crete+Round|Nunito+Sans:300,400,400i,700|Ramabhadra&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="/css/canvas.css" type="text/css" />
+        <link rel="stylesheet" href="/css/dark.css" type="text/css" />
+        <link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+        <link rel="stylesheet" href="/css/animate.css" type="text/css" />
+        <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+
+        <link rel="stylesheet" href="/css/canvas-responsive.css" type="text/css" />
+        <link rel="stylesheet" href="/css/custom.css">
+        <link rel="stylesheet" href="/css/colors.css" type="text/css" />
+        <link rel="stylesheet" href="/css/fonts.css" type="text/css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Document Title
+        ============================================= -->
+        <title>${title}</title>
+
+    </head>
+
+    <body class="stretched">
+
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v3.3&appId=349164129101779&autoLogAppEvents=1"></script>
 <!-- Document Wrapper
         ============================================= -->
 <div id="wrapper" class="clearfix">
@@ -121,34 +165,20 @@
 
                                 <!-- Product Single - Share
                                     ============================================= -->
-                                <div class="si-share noborder clearfix">
-                                    <span>Share:</span>
-                                    <div>
-                                        <a href="#" class="social-icon si-borderless si-facebook">
-                                            <i class="icon-facebook"></i>
-                                            <i class="icon-facebook"></i>
-                                        </a>
-                                        <a href="#" class="social-icon si-borderless si-twitter">
-                                            <i class="icon-twitter"></i>
-                                            <i class="icon-twitter"></i>
-                                        </a>
-                                        <a href="#" class="social-icon si-borderless si-pinterest">
-                                            <i class="icon-pinterest"></i>
-                                            <i class="icon-pinterest"></i>
-                                        </a>
-                                        <a href="#" class="social-icon si-borderless si-gplus">
-                                            <i class="icon-gplus"></i>
-                                            <i class="icon-gplus"></i>
-                                        </a>
-                                        <a href="#" class="social-icon si-borderless si-rss">
-                                            <i class="icon-rss"></i>
-                                            <i class="icon-rss"></i>
-                                        </a>
-                                        <a href="#" class="social-icon si-borderless si-email3">
-                                            <i class="icon-email3"></i>
-                                            <i class="icon-email3"></i>
-                                        </a>
-                                    </div>
+                                <div class="row align-items-center">
+	                                <div class="col-2">
+	                               		 <span>Share:</span>
+	                                </div>
+	                                    
+	                                    <div class="col-2">      
+	                                     	<a data-href="http://epoxydesignshop.com/product/${product.getId() }-${product.getName()}"
+	                                    		 target="_blank"
+	                                      		 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+	                                       	     class="social-icon si-borderless si-facebook">
+	                                            <i class="icon-facebook"></i>
+	                                            <i class="icon-facebook"></i></a>
+	                   
+	                                    </div>
                                 </div><!-- Product Single - Share End -->
 
                         </div>
@@ -176,29 +206,26 @@
 
                                         <table class="table table-striped table-bordered">
                                             <tbody>
+                                               
                                                 <tr>
-                                                    <td>Size</td>
-                                                    <td>Small, Medium &amp; Large</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Color</td>
+                                                    <td>Colors</td>
                                                     <td>Pink &amp; White</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Waist</td>
-                                                    <td>26 cm</td>
+                                                    <td>Height</td>
+                                                    <td>220cm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Length</td>
+                                                    <td>Width</td>
                                                     <td>40 cm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Chest</td>
-                                                    <td>33 inches</td>
+                                                    <td>Length</td>
+                                                    <td>33 cm</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Fabric</td>
-                                                    <td>Cotton, Silk &amp; Synthetic</td>
+                                                    <td>Material</td>
+                                                    <td>Epoxy</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Warranty</td>
