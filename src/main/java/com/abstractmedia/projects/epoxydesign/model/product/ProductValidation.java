@@ -33,7 +33,7 @@ public class ProductValidation {
 	
 		
 		if(this.product.getName().length() >=2 && this.product.getTitle().length() >= 2 && 
-				this.product.getPrice() != null && this.product.getImages().size() >= 1 &&
+				this.product.getPrice() != null &&
 				this.product.getDescription().length() >=15) {
 			return true;
 		}

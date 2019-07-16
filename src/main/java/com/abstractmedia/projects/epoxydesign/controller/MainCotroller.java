@@ -149,11 +149,6 @@ public class MainCotroller {
 	}
 	
 	
-	@GetMapping("test")
-	public String test() {
-		productRepository.save(new Product());
-		
-		return "all-products";
-	}
+
 
 }

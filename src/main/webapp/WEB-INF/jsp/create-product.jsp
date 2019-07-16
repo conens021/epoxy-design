@@ -53,14 +53,16 @@
 											>
 
 											<div class="row">
-
+												<input type="hidden" value="${product.getId() }" name="productId">
 												<div class="col-12 bottommargin-sm">
 													<label for="productName">Product Name<small class="text-danger">*</small></label>
-													<input type="text" id="template-contactform-name" name="productName"  class="form-control required" placeholder="Enter product name" />
+													<input type="text" id="template-contactform-name" name="productName" 
+													 class="form-control required" placeholder="Enter product name" value="${product.getName() }" />
 												</div>
 												<div class="col-12 bottommargin-sm">
 													<label for="productTitle">Product Title (Google)<small class="text-danger">*</small></label>
-													<input type="text" id="template-contactform-title" name="productTitle" value="" class="form-control required" placeholder="Enter product title" />
+													<input type="text" id="template-contactform-title" name="productTitle" 
+													 class="form-control required" placeholder="Enter product title"  value="${product.getTitle() }"/>
 												</div>
 												
 
@@ -69,7 +71,10 @@
 													<label for="category">Product Category<small class="text-danger">*</small></label>
 													<select id="template-contactform-default-select" name="category" class="form-control">
 														<option value="0" disabled selected>Select One</option>
-														<option value="1">Tables</option>
+														
+														<c:forEach items="${categories }" var="category">
+															<option value="${category.getId() }">${category.getName() }</option>	
+														</c:forEach>
 													
 													</select>
 												</div>
@@ -77,8 +82,12 @@
 													<label for="subcategory">Product Subcategory</label>
 													<select id="template-contactform-default-select" name="subcategory" class="form-control">
 														<option value="0" disabled selected>Select One</option>
-														<option value="1">Coffee Tables</option>
-														<option value="2">Dinner Tables</option>					
+														
+														<c:forEach items="${subcategories }" var="subcategory">
+															<option value="${subcategory.getId() }">${subcategory.getName() }</option>	
+														</c:forEach>
+														
+																		
 													</select>
 												</div>
 												
@@ -90,7 +99,9 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text">$</span>
 													</div>
-													<input id="template-contactform-budget" name="price" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter product price">
+													<input id="template-contactform-budget" name="price" type="text"
+													 class="form-control" aria-label="Amount (to the nearest dollar)" 
+													 placeholder="Enter product price" value="${product.getOriginalPrice() }">
 													
 													</div>
 												</div>
@@ -99,8 +110,19 @@
 												<div class="col-12 bottommargin-sm">
 													 <div class="d-flex align-items-center">
 														<div class="switch">
-															<input id="template-contactform-checked-switch" name="onSale"
-															class="switch-toggle switch-toggle-round"  type="checkbox" >
+														<c:choose>
+															<c:when test="${product.onSale() }">
+																<input type="hidden" id="onSale" value="${product.onSale() }">
+																<input id="template-contactform-checked-switch" name="onSale"
+															class="switch-toggle switch-toggle-round"  type="checkbox" checked="checked">
+															</c:when>
+															<c:otherwise>
+																	<input type="hidden" id="onSale" value="${product.onSale() }">
+																	<input id="template-contactform-checked-switch" name="onSale"
+															class="switch-toggle switch-toggle-round"  type="checkbox">
+															</c:otherwise>
+														</c:choose>
+															
 															<label for="template-contactform-checked-switch"></label>
 														</div>
 														<label class="media-body text-muted ml-3" for="template-contactform-checked-switch">
@@ -117,13 +139,16 @@
 														<span class="input-group-text">%</span>
 													</div>
 													<input id="saleAmount" name="saleAmount" type="text" class="form-control"
-													 aria-label="Amount (to the nearest dollar)" placeholder="Enter sale amount" disabled="disabled">
+													 aria-label="Amount (to the nearest dollar)" placeholder="Enter sale amount"
+													  disabled="disabled" value="${product.getSaleAmount() }">
 													
 													</div>
 												</div>
 											<div class="col-12 bottommargin-sm">
 													<label for="template-contactform-age" class="mb-3 clearfix">On Stock (Broj Proizvoda na Stanju)</label>
-													<input id="template-contactform-age" name="onStock" class="range_01 input-range-slider" />
+													<input type="hidden" id="onStock" value="${product.getOnStock() }">
+													<input id="template-contactform-age" 
+													name="onStock" class="range_01 input-range-slider"/>
 												</div>
 											
 
@@ -134,7 +159,14 @@
 											
 												<div class="col-lg-12 bottommargin">
 													<label for="description">Product description</label><br>
-													<textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="10"></textarea>
+													<textarea class="form-control" id="exampleFormControlTextarea1" 
+													name="description" rows="10">${product.getDescription() }</textarea>
+												</div>
+												
+												<div class="col-lg-12 bottommargin">
+													<label for="additionalInfo">Additional Info</label><br>
+													<textarea class="form-control" id="exampleFormControlTextarea1" 
+													name="additionalInfo" rows="5">${product.getAdditionalInfo() }</textarea>
 												</div>
 									
 												<div class="col-12">
@@ -203,12 +235,14 @@
 	<script>
 
 		jQuery(document).ready( function(){
+			
+			var onStock = $("#onStock").val();
 
 			jQuery(".range_01").ionRangeSlider({
 				grid: true,
 				min: 1,
 				max: 100,
-				from: 20,
+				from: onStock,
 				prefix: "Stock ",
 				max_postfix: "+"
 			});

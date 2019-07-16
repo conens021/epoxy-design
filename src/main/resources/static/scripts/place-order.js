@@ -10,7 +10,7 @@ $("#place-order").click(function(event){
 	
 				
 				if( !validate(element)){
-					console.log($(element).attr("name") + " not valid");
+					
 					$formisValid = false;
 					$("#place-order").prop("disabled",false);
 					return;
@@ -23,7 +23,8 @@ $("#place-order").click(function(event){
 		})
 		
 		if($formisValid){
-			console.log("submited")
+			$("#place-order").hide().animate({opacity:0});
+			$("#form-loader").show().animate({opacity:1});
 			$("#order-form").submit();
 		}
 		else{

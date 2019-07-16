@@ -185,6 +185,7 @@
 							</table>
 						</div>
 						<button id="place-order"  class="button button-3d fright">Place Order</button>
+						<img src="/images/preloader.gif" class="fright" id="form-loader">
 					</div>
 				</div>
 

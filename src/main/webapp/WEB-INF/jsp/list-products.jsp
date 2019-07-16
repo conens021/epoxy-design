@@ -62,6 +62,8 @@
 									<th class="pointer" onclick="sort('subcategory')">Subcategory <i id="subcategory" class="sorting"></i></th>
 									<th class="pointer" onclick="sort('createdTime')">Created <i id="createdTime" class="sorting"></i></th>
 									<th class="pointer" onclick="sort('lastUpdated')">Last Update <i id="lastUpdated" class="sorting"></i></th>
+									<th>Edit</th>
+									<th>Delete</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -77,6 +79,9 @@
 									<th>Subcategory</th>
 									<th>Created</th>
 									<th>Last Update</th>
+									<th>Edit</th>
+									<th>Delete</th>
+									
 								</tr>
 							</tfoot>
 							<tbody>
@@ -84,7 +89,7 @@
 									<tr>
 										<td>${ product.getId() }</td>
 										<td>
-											<a href="/product/${product.getId()}-${prod.getName()}"> ${ product.getName() }
+											<a href="/product/${product.getId()}-${prod.getName()}"> ${ product.getName() }<br/>
 											<img style="height:50px"src="/images/${product.getImages().get(0).getImageUrl()}">
 										  	</a>  
 										</td>
@@ -99,6 +104,8 @@
 										</td>
 										<td>${product.getCreatedTime() }</td>
 										<td>${product.getLastUpdated() }</td>
+										<td><a href="/djeke-djole/edit-product/${product.getId() }"><i class="icon-pencil2 lg success"></i></a></td>
+										<td><a href="/djeke-djole/delete-product/${product.getId() }"><i class="icon-trash1 lg danger"></i></a></td>
 								</tr>
 							</c:forEach>
 							

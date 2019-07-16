@@ -140,7 +140,7 @@
 								data-responsive_offset="off"
 								data-responsive="off"
 
-								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  2-->
 						<li class="dark" data-index="rs-70" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo4_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -217,7 +217,7 @@
 								data-responsive_offset="off"
 								data-responsive="off"
 
-								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE 3 -->
 						<li class="dark" data-index="rs-71" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo3_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -294,7 +294,7 @@
 								data-responsive_offset="off"
 								data-responsive="off"
 
-								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  4-->
 						<li class="dark" data-index="rs-72" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo2_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -371,7 +371,7 @@
 								data-responsive_offset="off"
 								data-responsive="off"
 
-								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  5-->
 						<li class="dark" data-index="rs-73" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo1_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -448,7 +448,7 @@
 								data-responsive_offset="off"
 								data-responsive="off"
 
-								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  6-->
 						<li class="dark" data-index="rs-74" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo6_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -525,7 +525,7 @@
 								data-responsive_offset="off"
 								data-responsive="off"
 
-								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">READ MORE </div>
+								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 					</ul>
 					<div style="" class="tp-static-layers">
@@ -588,11 +588,11 @@
 		
 			<section id="content" class="welcome-header section-padding">
 
-				<div class="site-wrapper">
+			
 
 					<div class="container clearfix ">
-						<h1 class="light" data-animate="bounce">Welcome</h1>
-
+						<h1 class="light" data-animate="fadeInUp">Welcome</h1>
+						
 						<p data-animate="fadeInUp">We produce unique hand made furniture that is made out of metal,wood and epoxy resin. 
 							We are a small start up company ,but with each new day we get stronger and bigger,and every single day our number of projects grows.
 							We are here to make your wishes come true , and to turn your dreams into reality.
@@ -600,7 +600,6 @@
 							We can equip your home,office and all types of catering faciliies.</p>
 					</div>
 
-				</div>
 
 			</section>
 			<!-- #content end -->
@@ -611,25 +610,29 @@
 
 		<!-- Custom Design
             ============================================= -->
-		<div id="custom-design">
-			<section id="content" class="custom-design section-padding">
+		<div id="services">
+		<div class="container clearfix" style="padding-top:10em;padding-bottom:10em">
+					<div class="row clearfix align-items-center">
 
-				<div class="site-wrapper">
-
-					<div class="container clearfix ">
-						<h2  class="light" data-animate="fadeInUp">Custom Design</h2>
-						<img  src="/images/custom-desing.svg"
-							style="width: 100px" data-animate="fadeInUp">
-						<p data-animate="fadeInUp">
-							We offer wide variety of products made out of wood and epoxy resin.
+						<div class="col-xl-5">
+							<div class="heading-block topmargin" data-animate="fadeInUp">
+								<h2 >Custom Design.</h2>
+							</div>
+							<p class="lead" data-animate="fadeInUp">We offer wide variety of products made out of wood and epoxy resin.
 							The custom option is made so you can chose,change and pick every single detail,type of wood (Oak,Cherry,Beech,Walnut etc.) ,you can pick the color of wood,shape,color of epoxy resin ,type of table legs , color of table legs etc.
 							We make tables,bars,cup holders,cutting boards,lamps etc.</p>
+						</div>
+
+						<div class="col-xl-7">
+
+							<div data-animate="zoomIn" data-delay="500" style="position: relative; margin-bottom: -60px; height: 426px;" class="ohidden" data-height-xl="426" data-height-lg="567" data-height-md="470" data-height-xs="183">
+								<img  src="/images/service2.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad" class="fadeInUp animated">
+							</div>
+
+						</div>
+
 					</div>
-
 				</div>
-
-			</section>
-			<!-- #Custom design end -->
 		</div>
 
 		
@@ -638,7 +641,7 @@
 			<!-- Contact Form & Map Overlay Section
         ============================================= -->
 			<section id="map-overlay"
-				style="background: url('/images/landing1.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; height: auto">
+				style="background: url('/images/landing.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; height: auto">
 
 				<div class="container clearfix">
 
@@ -647,7 +650,7 @@
 					<div  id="contact-form-overlay-mini" class="clearfix">
 
 						<div class="fancy-title title-dotted-border">
-							<h3 data-animate="fadeInUp">Contact Us</h3>
+							<h3 ">Contact Us</h3>
 						</div>
 
 						<div class="form-widget">

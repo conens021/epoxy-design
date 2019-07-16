@@ -14,10 +14,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Customer;
+import com.abstractmedia.projects.epoxydesign.model.Subcategory;
 import com.abstractmedia.projects.epoxydesign.model.order.Orders;
 import com.abstractmedia.projects.epoxydesign.model.order.ProductOrders;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
+import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.SubcategoryRepository;
 import com.abstractmedia.projects.epoxydesign.services.customer.CustomersRepositoryImpl;
 import com.abstractmedia.projects.epoxydesign.services.orders.OrdersRepositoryImpl;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
@@ -34,12 +38,48 @@ public class AdminController {
 	@Autowired
 	private CustomersRepositoryImpl customersRepositoryImpl;
 
+	@Autowired
+	private CategoryRepository categoryRepositroy;
+	
+	@Autowired
+	private SubcategoryRepository subcategoryRepository;
 	
 	@GetMapping("/djeke-djole/create-product")
-	public String createProduct() {
+	public String createProduct(Model model) {
+		model.addAttribute("product",new Product());
+		List<Category> categories = categoryRepositroy.findAll();
+		
+		List<Subcategory> subcategories = subcategoryRepository.findAll();
+		
+		model.addAttribute("categories" , categories);
+		model.addAttribute("subcategories" , subcategories);
+		
+		
 		return "create-product";
 	}
 	
+	
+    @GetMapping("/djeke-djole/edit-product/{id}")
+    public String editProduct(@PathVariable Integer id,Model model) {
+    	
+    	Product product = productRepositoryImpl.getById(id);
+    	
+    	
+    	if(product.getId()==0) {
+    		return "404";
+    	}
+    	
+    	List<Category> categories = categoryRepositroy.findAll();
+		
+		List<Subcategory> subcategories = subcategoryRepository.findAll();
+		
+		model.addAttribute("categories" , categories);
+		model.addAttribute("subcategories" , subcategories);
+    	
+    	model.addAttribute("product",product);
+    	
+    	return "create-product";
+    }
 	
 	
 	@GetMapping(value = {"/djeke-djole","/djeke-djole/list-products"})

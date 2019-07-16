@@ -67,7 +67,7 @@
                                     </a>
 
                                 </li>
-                                <li class="current"><a class="scroll-to" href="#services">
+                                <li ><a class="scroll-to" href="#services">
                                         <div>Services</div>
                                     </a></li>
 

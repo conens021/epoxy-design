@@ -58,11 +58,11 @@ body.stretched #header.full-header .container{
     background: -webkit-linear-gradient(to bottom, #121212, #232526) !important;  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #121212, #232526) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #ECECEC;
-    border-bottom : 2px ridge  #2d3436;
+   
    
 }
 
-.welcome-header .site-wrapper>div {
+.welcome-header div {
     text-align: center;
     display: grid;
     grid-row-gap: 9em;
@@ -89,14 +89,14 @@ body.stretched #header.full-header .container{
   background: #232526 !important;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom,  #232526,#414345) !important;  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #232526,#414345) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- 
+ padding-botto.:5em;
   color: #ECECEC;
 }
 
 .custom-design .site-wrapper>div {
     text-align: center;
     display: grid;
-    grid-row-gap: 9em;
+    grid-row-gap: 5em;
     justify-items: center;
 }
 

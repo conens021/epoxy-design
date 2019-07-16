@@ -30,6 +30,7 @@ import com.abstractmedia.projects.epoxydesign.model.order.ProductOrders;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 import com.abstractmedia.projects.epoxydesign.services.customer.CustomersRepositoryImpl;
 import com.abstractmedia.projects.epoxydesign.services.orders.OrdersRepository;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
 
 @Controller
 public class OrderController {
@@ -43,6 +44,9 @@ public class OrderController {
 	
 	@Autowired
 	private CustomersRepositoryImpl customersRepositoryImpl;
+	
+	@Autowired
+	private ProductRepository productRepository;
 	
 	@Autowired 
 	private Cart cart;
@@ -69,8 +73,8 @@ public class OrderController {
 		
 		List<ProductOrders> productOrders = new ArrayList<>();
 		
-		List<Product> items = cart.getCartItems(sessionHelper.getCart(session));
-	    BigDecimal subtotal = cart.calcCartSubTotal(items);
+	
+	    BigDecimal subtotal = cart.calcCartSubTotal(cartItems);
 	    BigDecimal tax = cart.getTAX(subtotal);
 	    BigDecimal total = cart.cartTotal(tax, subtotal);
 		
@@ -97,7 +101,7 @@ public class OrderController {
 		
 		Orders savedOrder = ordersRepisotry.save(order);
 		
-
+		
 		
 		
 		email.setFrom(customer.getEmail());
@@ -121,6 +125,15 @@ public class OrderController {
 			e.printStackTrace();
 		}
 		
+		
+		//change product quantity
+		for(Product p : cartItems) {
+			p.setOnStock(p.getOnStock() - p.getQuantity());
+			
+		}
+		
+		productRepository.saveAll(cartItems);
+	
 		
 		session.setAttribute("cart", new HashMap<Integer,Product>());
 		

@@ -90,6 +90,22 @@ nav button{
 }
 }
 
+
+#form-loader{
+	display:none;
+	opacity:0;
+}
+
+.icon-pencil2, .icon-trash1{
+	font-size:1.1em;
+	cursor:pointer;
+	transition:color .5s ease;
+}
+
+.icon-pencil2:hover, .icon-trash1:hover{
+	color : black;
+}
+
 @media (max-width: 575.98px) {
 
 	#page-title{

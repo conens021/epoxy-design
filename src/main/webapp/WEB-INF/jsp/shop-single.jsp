@@ -206,31 +206,12 @@ src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v3.3&appId=349164
 
                                         <table class="table table-striped table-bordered">
                                             <tbody>
-                                               
-                                                <tr>
-                                                    <td>Colors</td>
-                                                    <td>Pink &amp; White</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Height</td>
-                                                    <td>220cm</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Width</td>
-                                                    <td>40 cm</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Length</td>
-                                                    <td>33 cm</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Material</td>
-                                                    <td>Epoxy</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Warranty</td>
-                                                    <td>3 Months</td>
-                                                </tr>
+                                               <c:forEach items="${additionalInfo }" var="additional">
+	                                                <tr>
+	                                                    <td>${ additional.getKey() }</td>
+	                                                    <td>${ additional.getValue() }</td>
+	                                                </tr>
+                                               </c:forEach>
                                             </tbody>
                                         </table>
 

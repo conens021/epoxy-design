@@ -3,6 +3,8 @@ package com.abstractmedia.projects.epoxydesign.controller;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.SortedMap;
+import java.util.Map.Entry;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,6 +14,7 @@ import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
+import com.abstractmedia.projects.epoxydesign.services.product.ProductServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -33,7 +36,12 @@ public class ProductController {
 
     @Autowired
     private Cart cart;
-
+    
+    
+    @Autowired
+    private ProductServices productServices;
+    
+    
     @GetMapping("/product/{name}")
     public String getProductPage(Model model, HttpSession session, @PathVariable(required = true) String name) {
 
@@ -42,16 +50,28 @@ public class ProductController {
             Optional<Product> product = productRepository.findById(id);
 
             if (product.isPresent()) {
-
+            	
                 Page<Product> releatedProducts = productRepositoryImpl.getReleated(product.get().getProdCategory(), "1",
                         "asc", "onStock", 8, id);
+               
+
+                
+                SortedMap<String, String> additionalValues = productServices.getAdditionalValues(product.get().getAdditionalInfo());
+                
+                
+        		
+				
+    			for(Entry<String,String> entry : additionalValues.entrySet()) {
+    				System.out.println(String.format("Key: %s/t Value: %s", entry.getKey(),entry.getValue()));
+    			}
+                
+                Map<Integer,Product> sessionCart = sessionHelper.getCart(session);
+                List<Product> cartItems = cart.getCartItems(sessionCart);
                 model.addAttribute("releated", releatedProducts.getContent());
 
                 model.addAttribute("categories", sessionHelper.getCategories(session));
                 model.addAttribute("product", product.get());
-
-                Map<Integer,Product> sessionCart = sessionHelper.getCart(session);
-                List<Product> cartItems = cart.getCartItems(sessionCart);
+                model.addAttribute("additionalInfo",additionalValues.entrySet());
                 model.addAttribute("cartItems", cartItems);
                 model.addAttribute("cartTotal", cart.calcCartSubTotal(cartItems));
         		model.addAttribute("title",
@@ -73,5 +93,7 @@ public class ProductController {
         }
 
     }
+    
+
 
 }

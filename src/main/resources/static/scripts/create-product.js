@@ -1,5 +1,15 @@
 $(document).ready(function(){
+
+	var onSale = $("#onSale").val();
 	
+	if(onSale){
+		console.log("true");
+		$("#saleAmount").prop("disabled",false);
+	}else{
+		console.log("false");
+		$("#saleAmount").prop("disabled",true);
+	}
+
 
 	
 	$("#template-contactform-checked-switch").click(function(){

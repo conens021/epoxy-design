@@ -24,6 +24,7 @@ import org.springframework.lang.Nullable;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -52,6 +53,8 @@ public class Product implements Serializable {
 	private int saleAmount;
 	@Column(name="on_stock")
 	private int onStock;
+	
+	private String additionalInfo;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdTime;
@@ -87,13 +90,22 @@ public class Product implements Serializable {
 
 	public Product(){
 		
-		
+		this.name = "";
+		this.title = "";
+		this.description = "";
+		this.price = new BigDecimal(0.00);
+		this.sale = false;
+		this.saleAmount = 0;
+		this.onStock = 0;
+		this.images = new ArrayList<ProductImages>();
+		this.quantity = 0;
+		this.additionalInfo = "";
 	}
 
 	
 	public Product( String name, String title, String description, BigDecimal price, Boolean sale,
 			int saleAmount, int onStock, List<ProductImages> images,
-			 int quantity,Date createdTime,Date lastUpdated) {
+			 int quantity,Date createdTime,Date lastUpdated,String additionalInfo) {
 	
 		
 		this.name = name;
@@ -107,6 +119,7 @@ public class Product implements Serializable {
 		this.createdTime =createdTime;
 		this.quantity = quantity;
 		this.lastUpdated = lastUpdated;
+		this.additionalInfo = additionalInfo;
 	}
 
 
@@ -186,7 +199,7 @@ public class Product implements Serializable {
 	}/**
 	 * @param onStock the onStock to set
 	 */
-	public void setOnStock(int onStock) {
+	public synchronized void  setOnStock(int onStock) {
 		this.onStock = onStock;
 	}/**
 	 * @param price the price to set
@@ -290,6 +303,18 @@ public class Product implements Serializable {
 
 	public Date getLastUpdated() {
 		return lastUpdated;
+	}
+	
+	
+
+
+	public String getAdditionalInfo() {
+		return additionalInfo;
+	}
+
+
+	public void setAdditionalInfo(String additionalInfo) {
+		this.additionalInfo = additionalInfo;
 	}
 
 
