@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.SortedMap;
-import java.util.Map.Entry;
 
 import javax.servlet.http.HttpSession;
 
@@ -59,11 +58,7 @@ public class ProductController {
                 SortedMap<String, String> additionalValues = productServices.getAdditionalValues(product.get().getAdditionalInfo());
                 
                 
-        		
-				
-    			for(Entry<String,String> entry : additionalValues.entrySet()) {
-    				System.out.println(String.format("Key: %s/t Value: %s", entry.getKey(),entry.getValue()));
-    			}
+       
                 
                 Map<Integer,Product> sessionCart = sessionHelper.getCart(session);
                 List<Product> cartItems = cart.getCartItems(sessionCart);

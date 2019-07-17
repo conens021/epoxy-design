@@ -43,7 +43,7 @@
 
 </head>
 
-<body class="stretched">
+<body data-loader="2" class="stretched">
 
 	<!-- Document Wrapper
         ============================================= -->
@@ -591,13 +591,16 @@
 			
 
 					<div class="container clearfix ">
-						<h1 class="light" data-animate="fadeInUp">Welcome</h1>
-						
-						<p data-animate="fadeInUp">We produce unique hand made furniture that is made out of metal,wood and epoxy resin. 
+					<div class="heading-block topmargin-lg center">
+						<h1 data-animate="fadeInUp">Welcome To <br/>Epoxy Design</h1>
+						<span data-animate="fadeInUp" class="divcenter">We produce unique hand made furniture that is made out of metal,wood and epoxy resin. 
 							We are a small start up company ,but with each new day we get stronger and bigger,and every single day our number of projects grows.
 							We are here to make your wishes come true , and to turn your dreams into reality.
 							We take the wishes of our clients very seriously , and because of that we aproach every project with just right type of creativity and imagionation,and to back that all up , we put in hours of work and effort.
-							We can equip your home,office and all types of catering faciliies.</p>
+							We can equip your home,office and all types of catering faciliies. </span>
+					</div>
+						
+						
 					</div>
 
 
@@ -618,14 +621,14 @@
 							<div class="heading-block topmargin" data-animate="fadeInUp">
 								<h2 >Custom Design.</h2>
 							</div>
-							<p class="lead" data-animate="fadeInUp">We offer wide variety of products made out of wood and epoxy resin.
+							<p class="lead"  data-delay="500" data-animate="fadeInUp">We offer wide variety of products made out of wood and epoxy resin.
 							The custom option is made so you can chose,change and pick every single detail,type of wood (Oak,Cherry,Beech,Walnut etc.) ,you can pick the color of wood,shape,color of epoxy resin ,type of table legs , color of table legs etc.
 							We make tables,bars,cup holders,cutting boards,lamps etc.</p>
 						</div>
 
 						<div class="col-xl-7">
 
-							<div data-animate="zoomIn" data-delay="500" style="position: relative; margin-bottom: -60px; height: 426px;" class="ohidden" data-height-xl="426" data-height-lg="567" data-height-md="470" data-height-xs="183">
+							<div data-animate="zoomIn" data-delay="1000" style="position: relative; margin-bottom: -60px; height: 426px;" class="ohidden" data-height-xl="426" data-height-lg="567" data-height-md="470" data-height-xs="183">
 								<img  src="/images/service2.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad" class="fadeInUp animated">
 							</div>
 

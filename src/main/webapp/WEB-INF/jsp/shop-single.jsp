@@ -38,7 +38,7 @@
 
     </head>
 
-    <body class="stretched">
+    <body data-loader="10" class="stretched">
 
 <div id="fb-root"></div>
 <div id="fb-root"></div>
@@ -117,14 +117,20 @@ src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v3.3&appId=349164
                         </div>
 
                         <div class="col_two_fifth product-desc">
-
+							<div class="mb-3">
+                             <button class="btn btn-sm btn-success" disabled>On Stock</button>
+                            </div>
                             <!-- Product Single - Price
                                     ============================================= -->
                             <c:choose>
                                 <c:when test="${product.onSale()}">
                                     <div class="product-price"><del>$${product.getOriginalPrice()}</del>
-                                        <ins>$${product.getPrice()}</ins>
+                                        <ins>$${product.getPrice()}</ins><br/>
+                                      
                                     </div>
+                                    <div class="clear"></div>
+                                    <div>
+                                      <span class="you-save text-success">You Save : $35.00</span></div>
                                 </c:when>
                                 <c:otherwise>
                                     <div class="product-price"> <ins>$${product.getPrice()}</ins></div>

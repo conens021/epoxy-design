@@ -23,6 +23,19 @@
                 </div>
 
             </section><!-- #page-title end -->
+            
+            
+            <section id="content">
+            <div class="container">
+            	<div class="row justify-content-center align-items-center">
+            		<div class="col-sm-3 text-center">
+            			<a href="/djeke-djole/create-product"><i id="create-new-prod" class="icon-plus-sign" ></i><br/>
+            			<span>Create New Product</span>
+            			</a>
+            		</div>
+            	</div>
+            	</div>
+            </section>
 	
 	
 				<!-- Content
@@ -229,6 +242,7 @@
 	
 		}
 	</script>
+	
 	
 
 	<!-- Footer Scripts

@@ -57,13 +57,13 @@
                 <ul>
                 
      
-         			 <li><a href="/djeke-djole/create-product">
-                            <div>Create PRODUCT</div>
-                        </a>
-                     </li>
       	
          			 <li><a href="/djeke-djole/list-products">
-                            <div>List Products</div>
+                            <div>Products</div>
+                        </a>
+                     </li>
+                      <li><a href="/djeke-djole/categories">
+                            <div>Categories</div>
                         </a>
                      </li>
      				 	 <li><a href="/djeke-djole/orders">

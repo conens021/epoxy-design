@@ -12,6 +12,17 @@
 
 }
 
+.heading-block h1{
+  
+    color: #eee;
+}
+
+.heading-block.center > span, .heading-block.title-center > span, .center .heading-block > span {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .section-padding {
     padding-block-start: 10em;
 }

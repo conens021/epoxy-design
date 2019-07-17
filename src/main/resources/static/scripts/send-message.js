@@ -2,10 +2,12 @@ $(document).ready(function(){
 	var hasErorrs = false;
 	$("#send-msg").click(function(e){
 		
-	
+		
 		
 		if(hasErorrs){
 			$("#msg-sent").hide().animate({opacity:0});
+			$("#send-msg").hide().animate({opacity:0});
+			
 		}
 		
 		$("#loader-col").show().animate({
@@ -78,7 +80,7 @@ $(document).ready(function(){
 						 $("#template-contactform-"+key).css("border-color","#DDD");
 					
 					   }
-					   console.log(key, value);
+				
 				});
 				
 			}

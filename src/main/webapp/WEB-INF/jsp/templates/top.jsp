@@ -33,4 +33,4 @@
 
     </head>
 
-    <body class="stretched">
+    <body data-loader="10"  class="stretched">
