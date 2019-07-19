@@ -152,7 +152,7 @@ public class ProductServices {
 	public SortedMap<String,String>  getAdditionalValues(String additionalInfo) {
 		SortedMap<String,String> additionalValues = new  TreeMap<>();
 		
-		if(additionalInfo!= null) {	
+		if(additionalInfo!= null && !additionalInfo.trim().equals("")) {	
 		
 		
 			
@@ -170,5 +170,13 @@ public class ProductServices {
 		}
 		return additionalValues; 
 	}
+
+	public static String getUploadedFolder() {
+		return UPLOADED_FOLDER;
+	}
+	
+	
+	
+	
 }
 	

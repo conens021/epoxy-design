@@ -118,7 +118,30 @@
 										<td>${product.getCreatedTime() }</td>
 										<td>${product.getLastUpdated() }</td>
 										<td><a href="/djeke-djole/edit-product/${product.getId() }"><i class="icon-pencil2 lg success"></i></a></td>
-										<td><a href="/djeke-djole/delete-product/${product.getId() }"><i class="icon-trash1 lg danger"></i></a></td>
+										<td> <i class="icon-trash1 lg danger" data-toggle="modal" data-target="#delete-product-modal"></i></td>
+										
+										
+										
+										<div class="modal fade" id="delete-product-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-body">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title" id="myModalLabel">Deleteing Product</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<p class="mb-4">You are going to permanently delete this product. Are you sure?
+															<a class="btn btn-success" href="/djeke-djole/delete-product/${product.getId() }">Yes,delete</a>
+															<button class="btn btn-danger" data-dismiss="modal" >No,close</button>
+													   </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+										
+								
 								</tr>
 							</c:forEach>
 							

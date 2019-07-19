@@ -63,6 +63,13 @@ public class ProductRepositoryImpl{
     }
     
     
+    
+    public void deleteProduct(Product product) {
+    
+    	productRepository.delete(product);
+    }
+    
+    
     public Page<Product>getByName(String name,String page,String direction,String sortBy,Integer perPage){
     	 return productRepository.findByNameLike(name, PageRequest.of(
                  Integer.valueOf(page) -1 , perPage,
