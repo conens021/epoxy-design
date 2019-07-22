@@ -42,7 +42,7 @@
 	                    		<a href="#" class="btn btn-primary" style="width:100%">${subcategory.getName() }</a>
 	                    	</div>
 	                    	<i class="icon-pencil2 mr-2" id="change-category" data-toggle="modal" data-target="#edit-subcategory-modal-${subcategory.getId() }"></i>
-                    	
+                    		<i class="icon-trash1 " data-toggle="modal" data-target="#delete-subcategory-modal-${subcategory.getId() }"></i>
 										<div class="modal fade" id="edit-subcategory-modal-${subcategory.getId() }" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
 											<div class="modal-dialog">
 												<div class="modal-body">
@@ -56,6 +56,26 @@
 																
 																<input type="text" value="${subcategory.getName() }" name="subcategoryName">
 																<button type="submit" class="btn btn-success">Change</button>
+															</form>
+													   </div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal fade" id="delete-subcategory-modal-${subcategory.getId() }" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-body">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title" id="myModalLabel">Delete Subcategory</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<p class="mb-4">You are going to permanently delete this subcategory,category that belongs and ALL PRODUCTS releated to it. Are you sure?</p>
+															<form action="/djeke-djole/delete-subcategory" method="POST">
+																<input type="hidden" name="subcategoryId" value="${subcategory.getId() }">
+																<button type=Submit class="btn btn-success">Yes,delete</button>
+																<button class="btn btn-danger" data-dismiss="modal" >No,close</button>
 															</form>
 													   </div>
 													</div>

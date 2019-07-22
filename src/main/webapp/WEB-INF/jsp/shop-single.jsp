@@ -118,7 +118,15 @@ src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v3.3&appId=349164
 
                         <div class="col_two_fifth product-desc">
 							<div class="mb-3">
-                             <button class="btn btn-sm btn-success" disabled>On Stock</button>
+							<c:choose>
+								<c:when test="${product.getOnStock() > 0 }">
+									 <button class="btn btn-sm btn-success" disabled>On Stock</button>
+								</c:when>
+								<c:otherwise>
+									 <button class="btn btn-sm btn-danger" disabled>Out of Stock</button>
+								</c:otherwise>
+							</c:choose>
+                            
                             </div>
                             <!-- Product Single - Price
                                     ============================================= -->
@@ -130,10 +138,10 @@ src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v3.3&appId=349164
                                     </div>
                                     <div class="clear"></div>
                                     <div>
-                                      <span class="you-save text-success">You Save : $35.00</span></div>
+                                      <span class="you-save text-success">You Save : $${product.calcSaveAmount() }</span></div>
                                 </c:when>
                                 <c:otherwise>
-                                    <div class="product-price"> <ins>$${product.getPrice()}</ins></div>
+                                    <div class="product-price"> Price: <ins>$${product.getPrice()}</ins></div>
                                 </c:otherwise>
                             </c:choose><!-- Product Single - Price End -->
 
@@ -148,7 +156,7 @@ src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v3.3&appId=349164
                                 <div class="quantity clearfix">
                                     <input type="button" value="-" class="minus">
                                     <input type="hidden" value="${product.getId()}" name="prod_id" />
-                                    <input type="text" step="1" min="1" name="quantity" value="1" title="Qty"
+                                    <input type="text" step="1" min="1" max="${product.getOnStock() }" name="quantity" value="1" title="Qty"
                                         class="qty" size="4" />
                                     <input type="button" value="+" class="plus">
                                 </div>

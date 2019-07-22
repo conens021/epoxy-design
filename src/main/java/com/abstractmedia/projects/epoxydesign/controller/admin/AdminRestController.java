@@ -19,9 +19,16 @@ import com.abstractmedia.projects.epoxydesign.model.product.ProductImages;
 import com.abstractmedia.projects.epoxydesign.model.product.ProductResponse;
 import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
 import com.abstractmedia.projects.epoxydesign.services.categories.SubcategoryRepository;
+import com.abstractmedia.projects.epoxydesign.services.product.FileStorageServiceImpl;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductServices;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 
 @RestController
 public class AdminRestController {
@@ -37,7 +44,7 @@ public class AdminRestController {
 	@Autowired
 	private ProductServices productServices;
 	
-	
+
 	@PostMapping("/djeke-djole/upload-product")
 	public ResponseEntity<ProductResponse> uploadProduct(Model model, @RequestParam(name="images") MultipartFile files[],
 											 @RequestParam(name="productName") String productName,
@@ -55,6 +62,10 @@ public class AdminRestController {
 		
 		
 		  ProductResponse productResponse = null; Product p = null;
+		  
+		  
+	
+		
 		  
 		  //If product is being updated
 		  if(id != 0) {
@@ -97,7 +108,7 @@ public class AdminRestController {
 		  productServices.saveProductImages(files, images, p); p.setCreatedTime(new Date());
 		  p.setLastUpdated(new Date());
 		  
-		  productRepository.save(p);
+		 productRepository.save(p);
 		 			
 		
 

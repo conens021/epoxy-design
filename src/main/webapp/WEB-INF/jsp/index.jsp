@@ -9,30 +9,34 @@
 
 	<!-- Stylesheets
         ============================================= -->
+        
+        
+   
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400i,700%7CMontserrat:300,400,500,600,700%7CMerriweather:300,400,300i,400i"
 		rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="/css/canvas.css" type="text/css" />
-	<link rel="stylesheet" href="/css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="/css/swiper.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/canvas.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/swiper.css" type="text/css" />
 
 	<link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="/css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="/css/canvas-responsive.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/canvas-responsive.css" type="text/css" />
 
-	<link rel="stylesheet" href="/css/colors.css" type="text/css" />
-	<link rel="stylesheet" href="/css/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/colors.css" type="text/css" />
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/fonts.css" type="text/css" />
 	
 	<link rel="stylesheet" href="/css/settings.css" media="screen">
-	<link rel="stylesheet" href="/css/layers.css">
-	<link rel="stylesheet" type="text/css" href="/css/revolution.addon.particles.css">
-	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="stylesheet" href="/css/index-custom.css">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="https://resources.epoxydesignshop.com/css/revolution.addon.particles.css">
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/custom.css">
+	<link rel="stylesheet" href="https://resources.epoxydesignshop.com/css/index-custom.css">
+
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
@@ -66,10 +70,10 @@
 						<li class="dark" data-index="rs-69" data-transition="cube" 
 						data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" 
 						 data-easein="default" data-easeout="default" data-masterspeed="default"  
-						 data-thumb="include/rs-plugin/demos/assets/images/100x50_duo5_w.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						 data-thumb="include/rs-plugin/demos/assetshttps://resources.epoxydesignshop.com/images/100x50_duo5_w.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="/images/dummy.png"  alt="" 
-							 data-lazyload="/images/slider01.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="https://resources.epoxydesignshop.com/images/dummy.png"  alt="" 
+							 data-lazyload="https://resources.epoxydesignshop.com/images/slider01.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -143,10 +147,10 @@
 								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  2-->
-						<li class="dark" data-index="rs-70" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo4_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<li class="dark" data-index="rs-70" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assetshttps://resources.epoxydesignshop.com/images/100x50_duo4_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="/images/dummy.png"  alt=""  
-							data-lazyload="/images/slider02.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="https://resources.epoxydesignshop.com/images/dummy.png"  alt=""  
+							data-lazyload="https://resources.epoxydesignshop.com/images/slider02.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -220,10 +224,10 @@
 								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE 3 -->
-						<li class="dark" data-index="rs-71" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo3_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<li class="dark" data-index="rs-71" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assetshttps://resources.epoxydesignshop.com/images/100x50_duo3_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="/images/dummy.png"  alt=""  
-							data-lazyload="/images/slider03.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="https://resources.epoxydesignshop.com/images/dummy.png"  alt=""  
+							data-lazyload="https://resources.epoxydesignshop.com/images/slider03.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -297,10 +301,10 @@
 								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  4-->
-						<li class="dark" data-index="rs-72" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo2_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<li class="dark" data-index="rs-72" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assetshttps://resources.epoxydesignshop.com/images/100x50_duo2_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="/images/dummy.png"  alt="" 
-							 data-lazyload="/images/slider04.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="https://resources.epoxydesignshop.com/images/dummy.png"  alt="" 
+							 data-lazyload="https://resources.epoxydesignshop.com/images/slider04.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -374,10 +378,10 @@
 								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  5-->
-						<li class="dark" data-index="rs-73" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo1_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<li class="dark" data-index="rs-73" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assetshttps://resources.epoxydesignshop.com/images/100x50_duo1_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="/images/dummy.png"  alt=""  
-							data-lazyload="/images/slider05.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="https://resources.epoxydesignshop.com/images/dummy.png"  alt=""  
+							data-lazyload="https://resources.epoxydesignshop.com/images/slider05.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -451,10 +455,10 @@
 								style="z-index: 7; white-space: nowrap; font-size: 15px; line-height: 40px; font-weight: 700; color: rgba(0, 0, 0, 1.00);font-family:Open Sans;background-color:rgba(255, 255, 255, 1.00);padding:0px 30px 0px 30px;border-color:rgba(0, 0, 0, 1.00);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SHOP NOW </div>
 						</li>
 						<!-- SLIDE  6-->
-						<li class="dark" data-index="rs-74" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assets/images/100x50_duo6_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<li class="dark" data-index="rs-74" data-transition="cube" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="include/rs-plugin/demos/assetshttps://resources.epoxydesignshop.com/images/100x50_duo6_w.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->
-							<img src="/images/dummy.png"  alt=""  
-							data-lazyload="/images/slider06.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
+							<img src="https://resources.epoxydesignshop.com/images/dummy.png"  alt=""  
+							data-lazyload="https://resources.epoxydesignshop.com/images/slider06.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -592,7 +596,7 @@
 
 					<div class="container clearfix ">
 					<div class="heading-block topmargin-lg center">
-						<h1 data-animate="fadeInUp">Welcome To <br/>Epoxy Design</h1>
+						<h1 data-animate="fadeInUp">Welcome </h1>
 						<span data-animate="fadeInUp" class="divcenter">We produce unique hand made furniture that is made out of metal,wood and epoxy resin. 
 							We are a small start up company ,but with each new day we get stronger and bigger,and every single day our number of projects grows.
 							We are here to make your wishes come true , and to turn your dreams into reality.
@@ -628,8 +632,8 @@
 
 						<div class="col-xl-7">
 
-							<div data-animate="zoomIn" data-delay="1000" style="position: relative; margin-bottom: -60px; height: 426px;" class="ohidden" data-height-xl="426" data-height-lg="567" data-height-md="470" data-height-xs="183">
-								<img  src="/images/service2.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad" class="fadeInUp animated">
+							<div data-animate="zoomIn" data-delay="300" style="position: relative; margin-bottom: -60px; height: 426px;" class="ohidden" data-height-xl="426" data-height-lg="567" data-height-md="470" data-height-xs="183">
+								<img  src="https://resources.epoxydesignshop.com/images/service2.webp" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad" class="fadeInUp animated">
 							</div>
 
 						</div>
@@ -644,7 +648,7 @@
 			<!-- Contact Form & Map Overlay Section
         ============================================= -->
 			<section id="map-overlay"
-				style="background: url('/images/landing.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; height: auto">
+				style="background: url('https://resources.epoxydesignshop.com/images/Landing.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; height: auto">
 
 				<div class="container clearfix">
 
@@ -711,7 +715,7 @@
 								Message</button>
 						</div>
 						<div   class="col_full">
-							<img id="loader-col" style="display:none;opacity:0;height: 100px;margin: auto;" src="/images/loader.gif">
+							<img id="loader-col" style="display:none;opacity:0;height: 100px;margin: auto;" src="https://resources.epoxydesignshop.com/images/loader.gif">
 							<span id="msg-sent" style="display:none;opacity:0">Message sent</span>
 						</div>
 						
@@ -753,31 +757,31 @@
 
 	<!-- External JavaScripts
             ============================================= -->
-	<script src="/scripts/jquery.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/jquery.js"></script>
 	
 		<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
-	<script src="/scripts/jquery.themepunch.tools.min.js"></script>
-	<script src="/scripts/jquery.themepunch.revolution.min.js"></script>
-	<script src="/scripts/revolution.addon.particles.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/jquery.themepunch.tools.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/jquery.themepunch.revolution.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.addon.particles.min.js"></script>
 	
-	<script src="/scripts/revolution.extension.actions.min.js"></script>
-	<script src="/scripts/revolution.extension.carousel.min.js"></script>
-	<script src="/scripts/revolution.extension.kenburn.min.js"></script>
-	<script src="/scripts/revolution.extension.migration.min.js"></script>
-	<script src="/scripts/revolution.extension.parallax.min.js"></script>
-	<script src="/scripts/revolution.extension.slideanims.min.js"></script>
-	<script src="/scripts/revolution.extension.layeranimation.min.js"></script>
-	<script src="/scripts/revolution.extension.navigation.min.js"></script>
-	<script src="/scripts/revolution.extension.video.min.js"></script>	
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.actions.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.carousel.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.kenburn.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.migration.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.parallax.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.slideanims.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.layeranimation.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.navigation.min.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/revolution.extension.video.min.js"></script>	
 	
-	<script src="/scripts/plugins.js"></script>
-	<script src="/scripts/load-more.js"></script>
-	<script src="/scripts/send-message.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/plugins.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/load-more.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/send-message.js"></script>
 	
 	
 	<!-- Footer Scripts
             ============================================= -->
-	<script src="/scripts/functions.js"></script>
+	<script src="https://resources.epoxydesignshop.com/scripts/functions.js"></script>
 
 	   <script>
 	            $(document).ready(function(){

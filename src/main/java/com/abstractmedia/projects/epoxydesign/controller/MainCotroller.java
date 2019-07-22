@@ -22,7 +22,7 @@ import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.Category;
 import com.abstractmedia.projects.epoxydesign.model.Customer;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
-import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
+import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 
 @Controller
@@ -32,12 +32,14 @@ public class MainCotroller {
 	@Autowired
 	private ProductRepositoryImpl productRepositoryImpl;
 	
-	@Autowired
-	private ProductRepository productRepository;
+
 
 	@Autowired
 	private SessionHelper sessionHelper;
 
+	@Autowired
+	private CategoryRepository categoryRepository;
+	
 	@Autowired
 	private Cart cart;
 
@@ -67,7 +69,9 @@ public class MainCotroller {
 		model.addAttribute("sd", direction);
 		
 		
-		List<Category> categories = sessionHelper.getCategories(session);
+		
+	    List<Category> categories = categoryRepository.findAll();
+        
 		
 		List<String> categoryNames = new ArrayList<>();
 		
@@ -96,8 +100,8 @@ public class MainCotroller {
 	@GetMapping("/checkout")
 	public String getCheckout(Model model,HttpSession session) {
 
-
-		model.addAttribute("categories",sessionHelper.getCategories(session));
+		
+		model.addAttribute("categories",categoryRepository.findAll());
 		Map<Integer,Product> sessionCart = sessionHelper.getCart(session);
 		List<Product> cartItems = cart.getCartItems(sessionCart);
 		model.addAttribute("cartItems", cartItems);
@@ -123,7 +127,7 @@ public class MainCotroller {
 	@GetMapping("/cart")
     public String getCart(Model model, HttpSession session) {
 
-        model.addAttribute("categories", sessionHelper.getCategories(session));
+        model.addAttribute("categories", categoryRepository.findAll());
         
         Map<Integer,Product> sessionCart = sessionHelper.getCart(session);
 		

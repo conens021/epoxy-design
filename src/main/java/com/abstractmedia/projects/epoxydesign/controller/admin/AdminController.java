@@ -387,4 +387,43 @@ public class AdminController {
 	}
 	
 	
+	@PostMapping("/djeke-djole/delete-category")
+	public String deleteCategory(Model model, @RequestParam("categoryId") Integer id) {
+		
+		
+		
+		categoryRepositroy.deleteById(id);
+		
+		List<Category> categories = categoryRepositroy.findAll();
+		model.addAttribute("categories",categories);
+		return "categories-managment";
+	}
+	
+	
+	@PostMapping("/djeke-djole/delete-subcategory")
+	public String deleteSubcategory(Model model, @RequestParam("subcategoryId") Integer id) {
+		
+		
+		Optional<Subcategory> subcategory = subcategoryRepository.findById(id);
+		
+		
+		
+		
+		if(!subcategory.isPresent()) {
+			model.addAttribute("error","Podkategorija sa datim ID-om ne postoji!");
+			return "errorPage";
+		}
+		
+		
+		Category category = subcategory.get().getCategory();
+
+		subcategoryRepository.delete(subcategory.get());
+		
+		List<Subcategory> subcategories = subcategoryRepository.findAll();
+		model.addAttribute("category",category);
+		model.addAttribute("subcategories",subcategories);
+		
+		return "category-single";
+	}
+	
 }

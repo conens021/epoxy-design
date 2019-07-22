@@ -29,7 +29,7 @@
 													<c:forEach items="${product.getImages()}" var="image">
 														<div class="slide"><a
 																href="/product/${product.getId()}-${product.getName()}"><img
-																	src="/images/${image.getImageUrl()}"
+																	src="https://resources.epoxydesignshop.com/images/${image.getImageUrl()}"
 																	alt="${product.getName()} "></a></div>
 													</c:forEach>
 
@@ -41,7 +41,7 @@
 									<c:otherwise>
 										<c:forEach items="${product.getImages()}" var="image">
 											<a href="/product/${product.getId()}-${product.getName()}"><img
-													src="/images/${image.getImageUrl()}" alt="Checked Short Dress"></a>
+													src="https://resources.epoxydesignshop.com/images/${image.getImageUrl()}" alt="Checked Short Dress"></a>
 										</c:forEach>
 									</c:otherwise>
 								</c:choose>

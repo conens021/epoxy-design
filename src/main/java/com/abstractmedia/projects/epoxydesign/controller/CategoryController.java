@@ -80,7 +80,7 @@ public class CategoryController {
 					
 			}
 				
-			model.addAttribute("categories", sessionHelper.getCategories(session));
+			model.addAttribute("categories", categoryRepository.findAll());
 			model.addAttribute("sb", sortBy);
 			model.addAttribute("sd", direction);
 			Map<Integer, Product> sessionCart = sessionHelper.getCart(session);
@@ -94,7 +94,7 @@ public class CategoryController {
 		}
 		model.addAttribute("title",
 				String.format("Page Not Found - %s", DomainInfo.getDomainName()));
-		model.addAttribute("categories", sessionHelper.getCategories(session));
+		model.addAttribute("categories",categoryRepository.findAll());
 		return "404";
 
 	}
@@ -124,7 +124,7 @@ public class CategoryController {
 				model.addAttribute("hasNextPage", products.hasNext());
 				model.addAttribute("subcategory", optinalSubcateg.get());
 				model.addAttribute("subcategories", subcategories);
-				model.addAttribute("categories", sessionHelper.getCategories(session));
+				model.addAttribute("categories", categoryRepository.findAll());
 				model.addAttribute("sb", sortBy);
 				model.addAttribute("sd", direction);
 				Map<Integer, Product> sessionCart = sessionHelper.getCart(session);
@@ -138,12 +138,12 @@ public class CategoryController {
 			} else
 				model.addAttribute("title",
 						String.format("Page Not Found - %s", DomainInfo.getDomainName()));
-				model.addAttribute("categories", sessionHelper.getCategories(session));
+				model.addAttribute("categories",categoryRepository.findAll());
 				return "404";
 		}
 		model.addAttribute("title",
 				String.format("Page Not Found - %s", DomainInfo.getDomainName()));
-		model.addAttribute("categories", sessionHelper.getCategories(session));
+		model.addAttribute("categories", categoryRepository.findAll());
 		return "404";
 	}
 

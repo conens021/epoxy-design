@@ -1,10 +1,23 @@
 package com.abstractmedia.projects.epoxydesign.services.product;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.math.BigDecimal;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.SortedMap;
@@ -25,6 +38,17 @@ import com.abstractmedia.projects.epoxydesign.model.product.ProductImages;
 import com.abstractmedia.projects.epoxydesign.model.product.ProductResponse;
 import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
 import com.abstractmedia.projects.epoxydesign.services.categories.SubcategoryRepository;
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.PresignedUrlUploadRequest;
+
+import io.netty.handler.codec.http.HttpRequest;
 
 @Service
 public class ProductServices {
@@ -40,6 +64,11 @@ public class ProductServices {
 	private CategoryRepository categoryRepository;
 	@Autowired
 	private SubcategoryRepository subcategoryRepository;
+	
+	
+	@Autowired
+	private FileStorageServiceImpl fileStorageServiceImpl; 
+	
 	
 	
 
@@ -121,26 +150,29 @@ public class ProductServices {
 	
 	public void saveProductImages(MultipartFile files[],List<ProductImages> images,Product p) {
 		if(files != null) {
+		
+			  
+		
 			
 			for(MultipartFile file : files) {
 				if(!file.isEmpty()) {
-				    try {
+				  
 				    	StringBuilder fileName = new StringBuilder();
-				    	fileName.append(stringPatterns.generate(Chars.LETTER_CHARS, Size.MEDIUM_SIZE));
+				    	fileName.append(stringPatterns.generate(Chars.LETTER_CHARS, Size.SMALL_SIZE));
 				    	fileName.append(file.getOriginalFilename());
 				    	ProductImages prodImage = new ProductImages(fileName.toString());
 				    	prodImage.setProduct(p);
 				    	images.add(prodImage);
 				    	
-			            // Get the file and save it somewhere
-			            byte[] bytes = file.getBytes();
-			            Path path = Paths.get(UPLOADED_FOLDER  + fileName.toString());
-			            Files.write(path, bytes);
-			        
-			          
-			        } catch (IOException e) {
-			            e.printStackTrace();
-			        }
+				    	
+				    	try {
+							fileStorageServiceImpl.saveFile(file, fileName.toString());
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+				    	
+		
 			}
 		
 
@@ -176,6 +208,7 @@ public class ProductServices {
 	}
 	
 	
+
 	
 	
 }

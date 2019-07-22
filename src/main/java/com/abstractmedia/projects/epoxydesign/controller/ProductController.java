@@ -11,6 +11,7 @@ import com.abstractmedia.projects.epoxydesign.features.Cart;
 import com.abstractmedia.projects.epoxydesign.features.DomainInfo;
 import com.abstractmedia.projects.epoxydesign.features.SessionHelper;
 import com.abstractmedia.projects.epoxydesign.model.product.Product;
+import com.abstractmedia.projects.epoxydesign.services.categories.CategoryRepository;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepository;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductRepositoryImpl;
 import com.abstractmedia.projects.epoxydesign.services.product.ProductServices;
@@ -33,6 +34,9 @@ public class ProductController {
     @Autowired
     private SessionHelper sessionHelper;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+    
     @Autowired
     private Cart cart;
     
@@ -64,7 +68,7 @@ public class ProductController {
                 List<Product> cartItems = cart.getCartItems(sessionCart);
                 model.addAttribute("releated", releatedProducts.getContent());
 
-                model.addAttribute("categories", sessionHelper.getCategories(session));
+                model.addAttribute("categories", categoryRepository.findAll());
                 model.addAttribute("product", product.get());
                 model.addAttribute("additionalInfo",additionalValues.entrySet());
                 model.addAttribute("cartItems", cartItems);
@@ -78,12 +82,12 @@ public class ProductController {
             }
     		model.addAttribute("title",
 					String.format("Page Not Found - %s", DomainInfo.getDomainName()));
-            model.addAttribute("categories", sessionHelper.getCategories(session));
+            model.addAttribute("categories",categoryRepository.findAll());
             return "404";
         } catch (NumberFormatException ex) {
         	model.addAttribute("title",
 					String.format("Page Not Found - %s", DomainInfo.getDomainName()));
-        	model.addAttribute("categories", sessionHelper.getCategories(session));
+        	model.addAttribute("categories", categoryRepository.findAll());
             return "404";
         }
 

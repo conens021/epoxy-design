@@ -350,7 +350,10 @@ public class Product implements Serializable {
 
 	}
 
-
+	
+	public BigDecimal calcSaveAmount() {
+		return this.getOriginalPrice().multiply(new BigDecimal(this.saleAmount).divide(new BigDecimal(100))).setScale(2,RoundingMode.HALF_EVEN) ;
+	}
 
 	public BigDecimal totalPrice(){
 		return this.getPrice().multiply(new BigDecimal(this.quantity)).setScale(2,RoundingMode.HALF_EVEN);
