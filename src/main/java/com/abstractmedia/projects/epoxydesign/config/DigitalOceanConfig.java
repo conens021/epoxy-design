@@ -14,10 +14,10 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 public class DigitalOceanConfig {
 	
 	
-	@Value("DSAM6TTGD6BZTN3PBO5I")
+	@Value("xxxxx")
 	private String DO_SPACES_ACCESS_KEY;
 
-	@Value("PSUSbVjBMD+zTNt++iXXp117LCeppnhcEiSr9zCgfjM")
+	@Value("xxxxxxxx")
 	private String DO_SPACES_ACCESS_SECRET;
 
 	@Value("https://fra1.digitaloceanspaces.com")
