@@ -31,3 +31,5 @@ HELP.md
 
 ### IMAGES ###
 src/main/resources/static/images/
+
+secret_key.ppk
